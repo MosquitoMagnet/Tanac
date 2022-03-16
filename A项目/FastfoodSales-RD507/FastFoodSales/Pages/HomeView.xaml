@@ -1,0 +1,353 @@
+﻿<UserControl x:Class="DAQ.HomeView" Foreground="DarkGray"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DAQ"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:validaterule="clr-namespace:DAQ.Valications"
+             xmlns:ctls="clr-namespace:DAQ.Controls"
+             xmlns:i18N="clr-namespace:DAQ.Core"
+             xmlns:resx="clr-namespace:DAQ.I18n"
+             mc:Ignorable="d"      
+             xmlns:s="https://github.com/canton7/Stylet"
+             d:DesignHeight="600" d:DesignWidth="1000"
+              d:DataContext="{d:DesignInstance  local:HomeViewModel}"
+             >
+    <UserControl.Resources>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+    </UserControl.Resources>
+    <materialDesign:TransitioningContent  OpeningEffect="{materialDesign:TransitionEffect Kind=SlideInFromRight, Duration=00:00:0.5}">
+        <Grid >
+            <Grid   Grid.Row="0" Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Height="40" Width="40" RadiusX="4" RadiusY="4">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock Grid.Column="2" VerticalAlignment="Center"
+                           Text="What would be a good title for this App?" FontWeight="Bold" FontSize="28"
+                           Foreground="#FF363636" />
+                </Grid>
+                <Grid  Grid.Row="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <GroupBox  Header="Code"  Grid.Column="0">
+                        <StackPanel >
+                            <WrapPanel >
+                                <TextBox IsReadOnly="True" Margin="5" Width="150" materialDesign:HintAssist.Hint="Coil Module Code"
+                                 materialDesign:HintAssist.IsFloating="True">
+                                    <TextBox.Text>
+                                        <Binding Path="CoilModule" UpdateSourceTrigger="PropertyChanged" Mode="OneWay"
+                                         ValidatesOnDataErrors="True">
+                                            <Binding.ValidationRules>
+                                                <validaterule:LengthRule Min="1" Max="20" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                                <TextBox IsReadOnly="True" Margin="5" Width="50" materialDesign:HintAssist.Hint="SICode"
+                                 materialDesign:HintAssist.IsFloating="True">
+                                    <TextBox.Text>
+                                        <Binding Path="SI" UpdateSourceTrigger="PropertyChanged" Mode="OneWay"
+                                         ValidatesOnDataErrors="True">
+                                            <Binding.ValidationRules>
+                                                <validaterule:LengthRule Min="1" Max="20" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                            </WrapPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Border VerticalAlignment="Bottom" BorderBrush="#202020" BorderThickness="0"
+                                    CornerRadius="4" Width="80"
+                                    Height="80">
+                                        <Path Width="79" Height="79"  Fill="Black"
+                                      Data="{Binding Codeimage,Mode=OneWay}" />
+                                    </Border>
+                                </Grid>
+                                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                   Text="{Binding MatrixCode}" />
+                                <Grid Grid.Row="0" Grid.Column="2">
+                                    <materialDesign:PopupBox  
+                                                     Height="30" Width="30" 
+                                                     Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                                     PlacementMode="RightAndAlignBottomEdges">
+                                        <materialDesign:PopupBox.ToggleCheckedContent>
+                                            <materialDesign:PackIcon Kind="Pencil" Width="24" Height="24" />
+                                        </materialDesign:PopupBox.ToggleCheckedContent>
+                                        <StackPanel>
+                                            <Button
+                                        Command="{s:Action Get2DodeCommand}">
+                                                <materialDesign:PackIcon Kind="LanPending" Height="25" Width="25"
+                                                                 VerticalAlignment="Center"
+                                                                 ToolTip="GetMatrixCodeFromServer"
+                                                                 HorizontalAlignment="Center" />
+                                            </Button>
+                                            <Button
+                                        Command="{s:Action Set2DodeCommand}">
+                                                <materialDesign:PackIcon Kind="QrcodeEdit" Height="25" Width="25"
+                                                                 VerticalAlignment="Center"
+                                                                 ToolTip="SetMatrixCodeToMachine"
+                                                                 HorizontalAlignment="Center" />
+                                            </Button>
+                                        </StackPanel>
+                                    </materialDesign:PopupBox>
+
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Airborne Particle Counter" Grid.Column="2">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0">
+                                    <materialDesign:PackIcon 
+                                        Height="80" 
+                                        Width="80"
+                                        x:Name="PI"
+                                        HorizontalAlignment="Center"
+                                   
+                                        >
+                                        <materialDesign:PackIcon.Style>
+                                            <Style TargetType="materialDesign:PackIcon">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding AirDataVm.RunStatus}" Value="-1">
+                                                        <Setter Property="Kind" Value="SmileySad"  />
+                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding AirDataVm.RunStatus }" Value="0">
+                                                        <Setter Property="Kind" Value="SmileyHappy"/>
+                                                        <Setter Property="Foreground" Value="Red"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding AirDataVm.RunStatus }" Value="1">
+                                                        <Setter Property="Kind" Value="SmileyHappy"/>
+                                                        <Setter Property="Foreground" Value="Green"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </materialDesign:PackIcon.Style>
+                                    </materialDesign:PackIcon>
+                                </Grid>
+                                <TextBlock  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                   Text="RunStatus" />
+                                <Grid Grid.Row="0" Grid.Column="2">
+                                    <materialDesign:PopupBox  
+                                                     Height="30" Width="30" 
+                                                     Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                                     PlacementMode="RightAndAlignBottomEdges">
+                                        <materialDesign:PopupBox.ToggleCheckedContent>
+                                            <materialDesign:PackIcon Kind="Pencil" Width="24" Height="24" />
+                                        </materialDesign:PopupBox.ToggleCheckedContent>
+                                        <StackPanel>
+                                            <Button
+                                            Command="{s:Action AirConnectCommand}">
+                                                <materialDesign:PackIcon Kind="Link" Height="40" Width="40"
+                                                                 VerticalAlignment="Center"
+                                                                 Foreground="Yellow"
+                                                                 ToolTip="Connect Airborne Particle Counter"
+                                                                 HorizontalAlignment="Center" />
+                                            </Button>
+                                            <Button Command="{s:Action SetAirStartCommand }">
+                                                <materialDesign:PackIcon Kind="PlayCircleOutline" Height="40" Width="40"
+                                                                 Foreground="Green"
+                                                                 ToolTip="Start Airborne Particle Counter"
+                                                                 VerticalAlignment="Center"
+                                                                 HorizontalAlignment="Center" />
+                                            </Button>
+                                            <Button
+                                        Command="{s:Action SetAirStopCommand}">
+                                                <materialDesign:PackIcon Kind="StopCircleOutline" Height="40" Width="40"
+                                                                 VerticalAlignment="Center"
+                                                                 Foreground="Red"
+                                                                 ToolTip="Stop Airborne Particle Counter"
+                                                                 HorizontalAlignment="Center" />
+                                            </Button>
+                                        </StackPanel>
+                                    </materialDesign:PopupBox>
+
+                                </Grid>
+                            </Grid>
+                            <WrapPanel Margin="0,5,0,0"  >
+                                <TextBlock HorizontalAlignment="Center"  Text="Curren Flow"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center"  Text="{Binding AirDataVm.CurrentFlow}" Margin="10,0,0,0"></TextBlock>
+                            </WrapPanel>
+                            <WrapPanel Margin="0,5,0,0"  >
+                                <TextBlock HorizontalAlignment="Center"  Text="Curren Value"></TextBlock>
+                                <TextBlock HorizontalAlignment="Center"  Text="{Binding AirDataVm.CurrentValue5}" Margin="10,0,0,0"></TextBlock>
+                            </WrapPanel>
+                            <WrapPanel Margin="0,5,0,0"  >
+                                <TextBlock HorizontalAlignment="Center"  Text="{Binding AirDataVm.Message}" Margin="10,0,0,0"></TextBlock>
+                            </WrapPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="PLC Communication" Grid.Column="4">
+                        <StackPanel>
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid  Grid.Column="0" Margin="0,10,0,0">
+                                    <materialDesign:PackIcon 
+                                        Height="50" 
+                                        Width="50"
+                                        HorizontalAlignment="Center"                                
+                                        >
+                                        <materialDesign:PackIcon.Style>
+                                            <Style TargetType="materialDesign:PackIcon">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding ModbusDeviceVm.IsConnected }" Value="-1">
+                                                        <Setter Property="Kind" Value="SmileySad"  />
+                                                        <Setter Property="Foreground" Value="Red"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding ModbusDeviceVm.IsConnected}" Value="1">
+                                                        <Setter Property="Kind" Value="SmileyHappy"/>
+                                                        <Setter Property="Foreground" Value="Green"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </materialDesign:PackIcon.Style>
+                                    </materialDesign:PackIcon>
+                                </Grid>
+                                <TextBlock  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                   Text="LA PLC" FontSize="15" />
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Robot Message " Grid.Column="6">
+                        <StackPanel>
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid  Grid.Column="0" Margin="0,10,0,0">
+                                    <materialDesign:PackIcon 
+                                        Height="100" 
+                                        Width="100"
+                                        HorizontalAlignment="Center"                                
+                                        >
+                                        <materialDesign:PackIcon.Style>
+                                            <Style TargetType="materialDesign:PackIcon">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RotbotVm.RunStatus}" Value="-1">
+                                                        <Setter Property="Kind" Value="SmileySad"  />
+                                                        <Setter Property="Foreground" Value="Red"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding RotbotVm.RunStatus}" Value="1">
+                                                        <Setter Property="Kind" Value="SmileyHappy"/>
+                                                        <Setter Property="Foreground" Value="Green"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </materialDesign:PackIcon.Style>
+                                    </materialDesign:PackIcon>
+                                </Grid>
+                                <TextBlock  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                   Text="{Binding RotbotVm.ErrorNo}" FontSize="20" />
+                                <TextBlock  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"
+                                   Text="{Binding RotbotVm.ErrorMeeage}" FontSize="20" />
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <TabControl Grid.Row="4" Background="{x:Null}" TabStripPlacement="Top" mah:ControlsHelper.HeaderFontSize="15">
+                    <TabItem Header="Particle Counter">
+                        <Grid Background="#81d4fa">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".7*"></ColumnDefinition>
+                                <ColumnDefinition Width=".3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Border Grid.ColumnSpan="2"></Border>
+                            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="25, 10">
+                                <Path Width="25" Height="25" Stretch="Fill" Fill="#4C4949" Data="F1 M 38,3.16666C 57.2379,3.16666 72.8333,18.7621 72.8333,38C 72.8333,57.2379 57.2379,72.8333 38,72.8333C 18.7621,72.8333 3.16667,57.2379 3.16667,38C 3.16667,18.7621 18.7621,3.16666 38,3.16666 Z M 52.252,18.9974L 36.4164,18.9974L 23.75,39.5833L 34.8333,39.5833L 25.3316,60.1667L 50.6667,34.8333L 38,34.8333L 52.252,18.9974 Z "/>
+                                <StackPanel Margin="10, 0">
+                                    <TextBlock FontSize="22" Foreground="White">Particle Counter</TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                            <lvc:CartesianChart Name="Chart" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                                <lvc:CartesianChart.Series>
+                                    <lvc:LineSeries Values="{Binding AirDataVm.Values}" LineSmoothness="1" StrokeThickness="2" 
+                                DataLabels="True" FontSize="8" Foreground="#6B303030"
+                                Stroke="Gold" Fill="Transparent" PointGeometrySize="0"/>
+                                </lvc:CartesianChart.Series>
+                                <lvc:CartesianChart.AxisX>
+                                    <lvc:Axis IsEnabled="True" ShowLabels="True" Labels="{Binding AirDataVm.TimeStamp}"/>
+                                </lvc:CartesianChart.AxisX>
+                                <lvc:CartesianChart.AxisY>
+                                    <lvc:Axis Foreground="White" FontSize="14" MinValue="0" MaxValue="200" >
+                                        <lvc:Axis.Separator>
+                                            <lvc:Separator StrokeThickness="1" Stroke="#8EFFFFFF" StrokeDashArray="8" Step="20" />
+                                        </lvc:Axis.Separator>
+                                    </lvc:Axis>
+                                </lvc:CartesianChart.AxisY>
+                            </lvc:CartesianChart>
+                            <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Background="#4CFFFFFF" Height="270" VerticalAlignment="Top">
+                                <TextBlock Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0">0.5um Particle</TextBlock>
+                                <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Center"  Text="{Binding AirDataVm.CurrentValue5}"></TextBlock>
+                                <TextBlock Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0">1.0um Particle</TextBlock>
+                                <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Center"  Text="{Binding AirDataVm.CurrentValue10}"></TextBlock>
+                                <TextBlock Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0">Flow</TextBlock>
+                                <TextBlock Foreground="White" FontSize="40" HorizontalAlignment="Center" Text="{Binding AirDataVm.CurrentFlow}"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Msg">
+                        <ListBox ItemsSource="{Binding Msg}" ctls:ListScrollToEnd.IsScrollToEnd="True"></ListBox>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </materialDesign:TransitioningContent>
+</UserControl>

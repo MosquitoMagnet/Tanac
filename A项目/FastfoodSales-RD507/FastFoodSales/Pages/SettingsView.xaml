@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="DAQ.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ext="clr-namespace:DAQ.Core"
+             xmlns:i18N="clr-namespace:DAQ.Core.i18n"
+             xmlns:resx="clr-namespace:DAQ.I18n"
+            i18N:Translation.ResourceManager="{x:Static resx:lang.ResourceManager}"                         
+             xmlns:local="clr-namespace:DAQ"
+             mc:Ignorable="d" Foreground="DarkGray"
+             xmlns:s="https://github.com/canton7/Stylet"
+             d:DataContext="{d:DesignInstance local:SettingsViewModel}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="450" d:DesignWidth="250">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect Kind=SlideInFromRight, Duration=00:00:0.5}">
+        <TabControl Background="{x:Null}" TabStripPlacement="Top" mah:ControlsHelper.HeaderFontSize="15" >
+
+            <TabItem  Header="Main" mah:ControlsHelper.ContentCharacterCasing="Upper" mah:ControlsHelper.HeaderFontWeight="SemiBold" mah:ControlsHelper.HeaderMargin="8,0,-4,0">
+                <Grid Margin="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="0 5" 
+                       Text="{i18N:Loc Language}"/>
+                    <ComboBox
+                     Grid.Column="1" Grid.Row="0" Margin="10 0"  VerticalAlignment="Top" 
+                     SelectedItem="{Binding Language}" 
+                     ItemsSource="{Binding Langs}"
+                      />
+                    <TextBlock Grid.Column="0" Grid.Row="2" Margin="0 5" 
+                       Text="{i18N:Loc SICode}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding SICode }" Margin="10,0,0,0"></TextBox>
+                    <Button  Grid.Column="0" Grid.Row="6"  Margin="6" Command="{s:Action SaveCommand}">Save</Button>
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Device" mah:ControlsHelper.ContentCharacterCasing="Upper" mah:ControlsHelper.HeaderFontWeight="SemiBold" mah:ControlsHelper.HeaderMargin="8,0,-4,0">
+                <Grid Margin="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto "/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="0 5" 
+                       Text="{i18N:Loc PlcIP}"/>
+                    <TextBox Grid.Column="1" Text="{Binding _config.PlcIpAddress }"></TextBox>
+                    
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="0 5" 
+                       Text="{i18N:Loc PlcPort}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding _config.PlcPort }"></TextBox>
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Margin="0 5" 
+                       Text="{i18N:Loc PrinterIP}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding _config.PrinterIpAddress }"></TextBox>
+                    
+                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="0 5" 
+                       Text="{i18N:Loc PrinterPort}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Margin="5 0"  Text="{Binding _config.PrinterPort }"></TextBox>
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="4" Margin="0 5" 
+                       Text="NFC_IP"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding _config.NFCIpAddress }"></TextBox>
+
+                    <TextBlock Grid.Column="0" Grid.Row="5" Margin="0 5" 
+                       Text="NFC_Port"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" Margin="5 0"  Text="{Binding _config.NFCPort }"></TextBox>
+
+
+                    <Button  Grid.Column="0" Grid.Row="6"  Margin="6" Command="{s:Action SaveCommand}">Save</Button>
+
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Particle" mah:ControlsHelper.ContentCharacterCasing="Upper" mah:ControlsHelper.HeaderFontWeight="SemiBold" mah:ControlsHelper.HeaderMargin="8,0,-4,0">
+                <Grid Margin="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto "/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="0 5" 
+                       Text="{i18N:Loc AirCounterPort}"/>
+                    <ComboBox
+                     Grid.Column="1" Grid.Row="0" Margin="10 0"  VerticalAlignment="Top" 
+                     SelectedItem="{Binding _config.AirComPort}" 
+                     ItemsSource="{Binding Ports}"
+                      />
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="0 5" 
+                       Text="{i18N:Loc AirUpperLimit}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="0 5"
+                       Text="{Binding _config.AirValueH}"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Margin="0 5" 
+                       Text="{i18N:Loc AirLowLimit}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Margin="0 5" 
+                       Text="{Binding _config.AirValueL}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="0 5" 
+                       Text="{i18N:Loc ScanInterval}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Margin="0 5" 
+                       Text="{Binding _config.AirScanInterval}"/>
+                    <Button  Grid.Column="0" Grid.Row="5"  Margin="6" Command="{s:Action SaveCommand}">Save</Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </materialDesign:TransitioningContent>
+</UserControl>
