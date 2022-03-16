@@ -1,0 +1,71 @@
+﻿<Window x:Class="Mv.Shell.Views.Authentication.AuthenticationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mvvm="http://prismlibrary.com/"
+        xmlns:controls="clr-namespace:Mv.Controls;assembly=MV.Controls"
+        xmlns:authentication="clr-namespace:Mv.Shell.Views.Authentication"
+        xmlns:controls1="clr-namespace:Mv.Controls.Controls;assembly=MV.Controls"
+        mvvm:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterScreen"
+       xmlns:i18N="clr-namespace:Mv.Core.I18n;assembly=MV.Core"
+        xmlns:resx="clr-namespace:Mv.Resources.Resources;assembly=MV.Resources"
+        i18N:Translation.ResourceManager="{x:Static resx:lang.ResourceManager}"
+        Topmost="True"
+        Icon="pack://application:,,,/MV.Resources;component/Images/logo-icon.ico"
+        Title="AuthenticationWindow" Height="321" Width="430"
+        x:Name="OwnerWindow" Style="{StaticResource MvWindowStyle}">
+    <controls1:SwitchLoadingViewContainer IsLoading="{Binding IsLoading}">
+        <TabControl Margin="60 40 60 30" WindowChrome.IsHitTestVisibleInChrome="True">
+            <TabItem x:Name="SignInTabItem" IsSelected="True"
+                     Header="{i18N:Loc Login}">
+                <authentication:SignInView Margin="0 16 0 0" />
+                <TabItem.Triggers>
+                    <EventTrigger RoutedEvent="Selector.Selected">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.500" Storyboard.Target="{Binding ElementName=OwnerWindow}" Storyboard.TargetProperty="Height" From="384" To="321">
+                                    <DoubleAnimation.EasingFunction>
+                                        <BackEase  EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TabItem.Triggers>
+            </TabItem>
+            <TabItem Header="{i18N:Loc SignUp}" >
+                <authentication:SignUpView Margin="0 16 0 0" />
+                <TabItem.Triggers>
+                    <EventTrigger RoutedEvent="Selector.Selected">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.500" Storyboard.Target="{Binding ElementName=OwnerWindow}" Storyboard.TargetProperty="Height" From="321" To="384">
+                                    <DoubleAnimation.EasingFunction>
+                                        <BackEase  EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TabItem.Triggers>
+            </TabItem>
+        </TabControl>
+        <controls1:SwitchLoadingViewContainer.LoadingContent>
+            <Grid Background="#5458AF" Style="{StaticResource FadeInStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="1" Source="pack://application:,,,/MV.Resources;component/Images/logo-background.png" Height="180" Width="180" Style="{StaticResource ZoomDelayStyle}"/>
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <TextBlock Text="Loading MV for Windows" FontSize="14" Foreground="White" Style="{StaticResource FadeInStyle}"/>
+                    <TextBlock FontSize="14" Foreground="White" Width="25" Style="{StaticResource WaitingDotsStyle}"/>
+                </StackPanel>
+            </Grid>
+        </controls1:SwitchLoadingViewContainer.LoadingContent>
+    </controls1:SwitchLoadingViewContainer>
+</Window>

@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MV.Resources</AssemblyName>
+    <RootNamespace>Mv.Resources</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\avatar-default.png" />
+    <None Remove="Images\background1.jpg" />
+    <None Remove="Images\fb226746ae74bbb94edd7b2fd484e89%281%29.png" />
+    <None Remove="Images\FileTypes\ApkType.png" />
+    <None Remove="Images\FileTypes\DocType.png" />
+    <None Remove="Images\FileTypes\ExeType.png" />
+    <None Remove="Images\FileTypes\FolderType.png" />
+    <None Remove="Images\FileTypes\ImgType.png" />
+    <None Remove="Images\FileTypes\MusicType.png" />
+    <None Remove="Images\FileTypes\OtherType.png" />
+    <None Remove="Images\FileTypes\PdfType.png" />
+    <None Remove="Images\FileTypes\PptType.png" />
+    <None Remove="Images\FileTypes\RarType.png" />
+    <None Remove="Images\FileTypes\TxtType.png" />
+    <None Remove="Images\FileTypes\VideoType.png" />
+    <None Remove="Images\FileTypes\XlsType.png" />
+    <None Remove="Images\logo-accelerider.png" />
+    <None Remove="Images\logo-background.png" />
+    <None Remove="Images\logo-icon.ico" />
+    <None Remove="Images\logo-small.png" />
+    <None Remove="Images\logo_elegrp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\avatar-default.png" />
+    <Resource Include="Images\background1.jpg" />
+    <Resource Include="Images\fb226746ae74bbb94edd7b2fd484e89(1).png" />
+    <Resource Include="Images\FileTypes\ApkType.png" />
+    <Resource Include="Images\FileTypes\DocType.png" />
+    <Resource Include="Images\FileTypes\ExeType.png" />
+    <Resource Include="Images\FileTypes\FolderType.png" />
+    <Resource Include="Images\FileTypes\ImgType.png" />
+    <Resource Include="Images\FileTypes\MusicType.png" />
+    <Resource Include="Images\FileTypes\OtherType.png" />
+    <Resource Include="Images\FileTypes\PdfType.png" />
+    <Resource Include="Images\FileTypes\PptType.png" />
+    <Resource Include="Images\FileTypes\RarType.png" />
+    <Resource Include="Images\FileTypes\TxtType.png" />
+    <Resource Include="Images\FileTypes\VideoType.png" />
+    <Resource Include="Images\FileTypes\XlsType.png" />
+    <Resource Include="Images\logo-accelerider.png" />
+    <Resource Include="Images\logo-background.png" />
+    <Resource Include="Images\logo-icon.ico" />
+    <Resource Include="Images\logo-small.png" />
+    <Resource Include="Images\logo_elegrp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\lang.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>lang.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\lang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

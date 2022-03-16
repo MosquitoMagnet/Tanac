@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="Mv.Modules.TagManager.Views.DashBoard.DashBoardList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mv.Modules.TagManager.Views.DashBoard"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:ViewModel="clr-namespace:Mv.Modules.TagManager.ViewModels.DashBoard"
+             d:DataContext="{d:DesignInstance ViewModel:DashBoardListViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+    <UserControl.Resources>
+        <DataTemplate x:Key="DeviceData">
+            <Grid Margin="2">
+                <Border  CornerRadius="1" Background="#FFE8E7F9">
+                    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock  TextWrapping="Wrap" FontSize="30"  Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <Grid Grid.Row="1" Margin="0,10,0,10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="20" TextAlignment="Center"  Foreground="Blue" FontWeight="Bold">产量:</TextBlock>
+                            <TextBox Grid.Column="1"  Background="White" FontSize="17"
+                                         Text="{Binding Yield}" MinWidth="100" TextAlignment="Center"
+                                         Foreground="Blue" IsReadOnly="True" FontWeight="Bold" 
+                                        HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,0,4,0"/>
+                            <TextBlock Grid.Column="2" FontSize="20" Foreground="Blue" FontWeight="Bold" >PCS</TextBlock>
+                        </Grid>
+                        <TextBox IsReadOnly="True" Grid.Row="2" 
+                                 TextAlignment="Center"
+                                 FontSize="30">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Summary }" Value="1">
+                                            <Setter Property="Text" Value="设备停止"  />
+                                            <Setter Property="Foreground" Value="Yellow"/>
+                                            <Setter Property="Background" Value="Red"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Summary}" Value="2">
+                                            <Setter Property="Text" Value="设备正常"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Setter Property="Background" Value="Green"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Summary}" Value ="0">
+                                            <Setter Property="Text" Value="设备异常"  />
+                                            <Setter Property="Foreground" Value="Red"/>
+                                            <Setter Property="Background" Value="yellow"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Background="#FF3FB075">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle  Fill="White"/>
+            <Button Style="{x:Null}" Command="{Binding NavigateToEditorCommand}" Background="White"></Button>
+            <Border Grid.Column="0" Margin="10,5,10,5">
+                <Border.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/MV.Resources;component/Images/fb226746ae74bbb94edd7b2fd484e89(1).png"/>
+                </Border.Background>
+            </Border>
+            <TextBlock  Grid.Column="1" 
+                        VerticalAlignment="Center"
+                        TextAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Foreground="White"
+                        FontSize="52" Margin="10,0,0,0"
+                        Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" FontFamily="Microsoft YaHei">
+            </TextBlock>
+            <Button Grid.Column="2" Foreground="Black"  
+                    Background="#FF43C2CB" 
+                    Command="{Binding NavigateToBackCommand}"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Cursor="Hand" Height="45" Width="80" FontSize="24" FontFamily="Microsoft YaHei" Click="Button_Click">返回</Button>
+        </Grid>
+        <ItemsControl Grid.Row="1" ItemTemplate="{StaticResource DeviceData}"  ItemsSource="{Binding DeviceItems}" Margin="2,5,2,2">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="6" Rows="3"></UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>
+</UserControl>
