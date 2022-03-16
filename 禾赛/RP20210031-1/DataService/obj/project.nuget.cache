@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZNtbV5rFppJCYRX03IgsXCNBk7urbIuCS0YLO9+7WW8bbk5qZsdjn0L8AW2utTMsd4TXUOtPhHObZj79IrAy1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\禾赛项目\\RP20210031-1\\DataService\\DataService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhangyong\\.nuget\\packages\\system.reactive\\4.4.1\\system.reactive.4.4.1.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\system.reactive.linq\\4.4.1\\system.reactive.linq.4.4.1.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

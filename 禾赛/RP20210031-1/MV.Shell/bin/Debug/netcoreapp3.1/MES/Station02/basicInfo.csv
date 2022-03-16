@@ -1,0 +1,2 @@
+operationType,ProductType,sn,lidarId,cubicleCode,terminalCode,workorderCode,workorderReportld,quantity,tester,dateTimeStart,dateTimeEnd,checkResult,ngCode,ngOutput,produceTime,submitTime,carrierNo,holeNo
+1,AT,zhijiaoerweima,None,ATZJ-ZJZZ-01,None,ZJ22022101,1495705701627088897,1,ATZJ,,,False,000,0,0,2022-02-22T10:56:21+08:00,,1

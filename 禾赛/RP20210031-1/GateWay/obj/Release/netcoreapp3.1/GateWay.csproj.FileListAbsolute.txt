@@ -1,0 +1,16 @@
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\GateWay.deps.json
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\GateWay.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\GateWay.pdb
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\DataService.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\MV.Core.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\System.Reactive.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\DataService.pdb
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\MV.Core.pdb
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\bin\Release\netcoreapp3.1\System.Reactive.xml
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.csprojAssemblyReference.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.AssemblyInfoInputs.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.AssemblyInfo.cs
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.csproj.CoreCompileInputs.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.csproj.CopyComplete
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\GateWay\obj\Release\netcoreapp3.1\GateWay.pdb

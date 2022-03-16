@@ -1,0 +1,8 @@
+D:\软件开发相关\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.csprojAssemblyReference.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.AssemblyInfoInputs.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.AssemblyInfo.cs
+D:\软件开发相关\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.csproj.CoreCompileInputs.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.csprojAssemblyReference.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.AssemblyInfoInputs.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.AssemblyInfo.cs
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Axis\Mv-Axis\OmronDriver\obj\Debug\netcoreapp3.1\OmronDriver.csproj.CoreCompileInputs.cache

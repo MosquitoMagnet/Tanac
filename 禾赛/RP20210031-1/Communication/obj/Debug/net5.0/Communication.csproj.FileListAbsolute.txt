@@ -1,0 +1,12 @@
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\bin\Debug\net5.0\Communication.deps.json
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\bin\Debug\net5.0\Communication.dll
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\bin\Debug\net5.0\ref\Communication.dll
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\bin\Debug\net5.0\Communication.pdb
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.csprojAssemblyReference.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.GeneratedMSBuildEditorConfig.editorconfig
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.AssemblyInfoInputs.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.AssemblyInfo.cs
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.csproj.CoreCompileInputs.cache
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.dll
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\ref\Communication.dll
+\\file.tanac.ltd\profile\tanac\yong.zhang\Desktop\Mv-Master\Mv-Master\Communication\obj\Debug\net5.0\Communication.pdb

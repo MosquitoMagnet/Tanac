@@ -1,0 +1,12 @@
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\bin\Release\netcoreapp3.1\MV.Authentication.deps.json
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\bin\Release\netcoreapp3.1\MV.Authentication.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\bin\Release\netcoreapp3.1\MV.Authentication.pdb
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\bin\Release\netcoreapp3.1\MV.Core.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\bin\Release\netcoreapp3.1\MV.Core.pdb
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.csprojAssemblyReference.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.AssemblyInfoInputs.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.AssemblyInfo.cs
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.csproj.CoreCompileInputs.cache
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.csproj.CopyComplete
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.dll
+D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Authentication\obj\Release\netcoreapp3.1\MV.Authentication.pdb

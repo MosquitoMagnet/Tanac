@@ -1,0 +1,16 @@
+E:\Mv-RD402\Mv-RD402\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.deps.json
+E:\Mv-RD402\Mv-RD402\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.dll
+E:\Mv-RD402\Mv-RD402\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.pdb
+E:\Mv-RD402\Mv-RD402\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.AssemblyInfoInputs.cache
+E:\Mv-RD402\Mv-RD402\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.AssemblyInfo.cs
+E:\Mv-RD402\Mv-RD402\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.csproj.CoreCompileInputs.cache
+E:\Mv-RD402\Mv-RD402\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.dll
+E:\Mv-RD402\Mv-RD402\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.pdb
+E:\源代码\Mv-Master\Mv-Master\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.deps.json
+E:\源代码\Mv-Master\Mv-Master\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.dll
+E:\源代码\Mv-Master\Mv-Master\MV.Core\bin\x86\Debug\netcoreapp3.1\MV.Core.pdb
+E:\源代码\Mv-Master\Mv-Master\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.AssemblyInfoInputs.cache
+E:\源代码\Mv-Master\Mv-Master\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.AssemblyInfo.cs
+E:\源代码\Mv-Master\Mv-Master\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.csproj.CoreCompileInputs.cache
+E:\源代码\Mv-Master\Mv-Master\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.dll
+E:\源代码\Mv-Master\Mv-Master\MV.Core\obj\x86\Debug\netcoreapp3.1\MV.Core.pdb
