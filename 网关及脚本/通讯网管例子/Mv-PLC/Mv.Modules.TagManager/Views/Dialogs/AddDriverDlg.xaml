@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Mv.Modules.TagManager.Views.Dialogs.AddDriverDlg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mv.Modules.TagManager.Views.Dialogs"         
+                xmlns:localvm="clr-namespace:Mv.Modules.TagManager.ViewModels.Dialogs"     
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Width="400" 
+             Padding="20"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+    <StackPanel>
+        <TextBlock Text="Name"></TextBlock>
+        <TextBox Text="{Binding DriverName}"/>
+        <TextBlock Text="ClassName"></TextBlock>
+        <ComboBox   ItemsSource="{Binding DriverInfos}" 
+                    SelectedValue="{Binding SelectedValue}"
+                    DisplayMemberPath="Description">
+        </ComboBox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource MaterialDesignFlatButton}" 
+                 Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                  CommandParameter="OK">OK</Button>
+            <Button Style="{StaticResource MaterialDesignFlatButton}" 
+                  Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                  CommandParameter="Cancel"
+                    Grid.Column="1">CANCEL</Button>
+        </Grid>
+    </StackPanel>
+</UserControl>

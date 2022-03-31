@@ -1,0 +1,237 @@
+﻿<UserControl x:Class="DAQ.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DAQ"
+             mc:Ignorable="d" Foreground="DarkGray"
+             xmlns:s="https://github.com/canton7/Stylet"
+             d:DataContext="{d:DesignInstance local:SettingsViewModel}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect Kind=SlideInFromBottom, Duration=00:00:0.5}">
+        <ScrollViewer >
+            <Grid Margin="20" MinWidth="900" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ScrollViewer Grid.ColumnSpan="2" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Orientation="Horizontal"  Margin="20" >
+                        <materialDesign:Card Margin="10 0"  Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2">
+                            <StackPanel >
+                                <WrapPanel>
+                                    <materialDesign:PackIcon Foreground="DarkGray" Kind="SerialPort" Height="34" Width="34" HorizontalAlignment="Center" VerticalAlignment="Center"></materialDesign:PackIcon>
+                                    <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" Foreground="DarkGray" FontSize="22">PLC</TextBlock>
+                                </WrapPanel>
+                                <GridSplitter/>
+                                <StackPanel Margin="10" Width="200">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                        <TextBox materialDesign:HintAssist.Hint="IP"  Text="{Binding PLC_IP}"
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" MinWidth="100" ></TextBox>
+                                        <TextBox     materialDesign:HintAssist.Hint="Port" Text="{Binding PLC_Port}"   
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" Margin="10,0,0,0"></TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                                        <TextBox materialDesign:HintAssist.Hint="读取D寄存器开始地址"  Text="{Binding PLC_RD}"
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" MinWidth="100" ></TextBox>
+                                        <TextBox     materialDesign:HintAssist.Hint="长度" Text="{Binding PLC_RLen}"   
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" Margin="10,0,0,0"></TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                                        <TextBox materialDesign:HintAssist.Hint="写入D寄存器开始地址"  Text="{Binding PLC_WD}"
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" MinWidth="100" ></TextBox>
+                                        <TextBox     materialDesign:HintAssist.Hint="长度" Text="{Binding PLC_WLen}"   
+                                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" Margin="10,0,0,0"></TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </StackPanel>
+                </ScrollViewer>
+                <materialDesign:Card Foreground="DarkGray" Grid.Column="2" Grid.Row="0" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel >
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                <materialDesign:PackIcon Kind="AndroidDebugBridge" Height="30" Width="30"></materialDesign:PackIcon>
+                                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" VerticalAlignment="Center" FontSize="22">TH2829X</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon   Height="10" Width="10" HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10 10 10 0" Kind="AppleKeyboardCommand">
+                                    <materialDesign:PackIcon.Style>
+                                        <Style TargetType="materialDesign:PackIcon">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding PortServiceA.IsConnected}" Value="true">
+                                                    <Setter Property="Foreground" Value="Green"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding PortServiceA.IsConnected}" Value="false">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </materialDesign:PackIcon.Style>
+                                </materialDesign:PackIcon>
+                                <ComboBox  materialDesign:HintAssist.Hint="PORT" SelectedItem="{Binding PortA}" ItemsSource="{Binding Ports}"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                                <ComboBox x:Name="CmdA" Margin="5 0" SelectedIndex="0" ItemsSource="{Binding PortACMDs}" IsEditable="True" materialDesign:HintAssist.Hint="COMMAND"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                                <Button VerticalAlignment="Bottom" Margin="20 0" Background="SkyBlue" BorderBrush="{x:Null}" Command="{s:Action QueryA}" CommandParameter="{Binding ElementName=CmdA, Path=Text}">Query</Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBox IsReadOnly="True" Margin="0 10" Grid.Row="1" Text="{Binding PortABuffer}"
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"               
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="Data Feedback"                      
+                    />
+
+                    </Grid>
+                </materialDesign:Card>
+                <materialDesign:Card Foreground="DarkGray" Grid.Column="0" Grid.Row="1" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel >
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                <materialDesign:PackIcon Kind="AndroidDebugBridge" Height="30" Width="30"></materialDesign:PackIcon>
+                                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}"  VerticalAlignment="Center" FontSize="22">TH9320-S8A-1</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Height="15" Width="15" HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="0 10 10 0" Kind="AppleKeyboardCommand">
+                                    <materialDesign:PackIcon.Style>
+                                        <Style TargetType="materialDesign:PackIcon">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding PortServiceB.IsConnected}" Value="true">
+                                                    <Setter Property="Foreground" Value="Green"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding PortServiceB.IsConnected}" Value="false">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </materialDesign:PackIcon.Style>
+                                </materialDesign:PackIcon>
+                                <ComboBox  SelectedItem="{Binding PortB}" materialDesign:HintAssist.Hint="PORT"  ItemsSource="{Binding Ports}"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                                <ComboBox x:Name="CmdB" Margin="5 0" ItemsSource="{Binding PortBCMDs }" SelectedIndex="0" IsEditable="True" materialDesign:HintAssist.Hint="COMMAND"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                                <Button Command="{s:Action Method=QueryB}" CommandParameter="{Binding ElementName=CmdB, Path=Text}"  Margin="2 0" VerticalAlignment="Bottom" Background="SkyBlue" BorderBrush="{x:Null}">Query</Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBox IsReadOnly="True" Margin="0 10" Grid.Row="1" Text="{Binding PortBBuffer}"                   
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"               
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="Data Feedback"
+                    />
+                    </Grid>
+                </materialDesign:Card>
+                <materialDesign:Card Foreground="DarkGray" Grid.Column="1" Grid.Row="1" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel >
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                <materialDesign:PackIcon Kind="AndroidDebugBridge" Height="30" Width="30"></materialDesign:PackIcon>
+                                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}"  VerticalAlignment="Center" FontSize="22">TH9320-S8A-2</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Height="15" Width="15" HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="0 10 10 0" Kind="AppleKeyboardCommand">
+                                    <materialDesign:PackIcon.Style>
+                                        <Style TargetType="materialDesign:PackIcon">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding PortServiceC.IsConnected}" Value="true">
+                                                    <Setter Property="Foreground" Value="Green"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding PortServiceC.IsConnected}" Value="false">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </materialDesign:PackIcon.Style>
+                                </materialDesign:PackIcon>
+                                <ComboBox  SelectedItem="{Binding PortC}" materialDesign:HintAssist.Hint="PORT"  ItemsSource="{Binding Ports}"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                                <ComboBox x:Name="CmdC" Margin="5 0" ItemsSource="{Binding PortCCMDs }" SelectedIndex="0" IsEditable="True" materialDesign:HintAssist.Hint="COMMAND"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                                <Button Command="{s:Action Method=QueryC}" CommandParameter="{Binding ElementName=CmdC, Path=Text}"  Margin="2 0" VerticalAlignment="Bottom" Background="SkyBlue" BorderBrush="{x:Null}">Query</Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBox IsReadOnly="True" Margin="0 10" Grid.Row="1" Text="{Binding PortCBuffer}"                   
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"               
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="Data Feedback"
+                    />
+                    </Grid>
+                </materialDesign:Card>
+                <materialDesign:Card Foreground="DarkGray" Grid.Column="2" Grid.Row="1" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel >
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                <materialDesign:PackIcon Kind="AndroidDebugBridge" Height="30" Width="30"></materialDesign:PackIcon>
+                                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}"  VerticalAlignment="Center" FontSize="22">TH9320-S8A-3</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Height="15" Width="15" HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="0 10 10 0" Kind="AppleKeyboardCommand">
+                                    <materialDesign:PackIcon.Style>
+                                        <Style TargetType="materialDesign:PackIcon">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding PortServiceC.IsConnected}" Value="true">
+                                                    <Setter Property="Foreground" Value="Green"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding PortServiceC.IsConnected}" Value="false">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </materialDesign:PackIcon.Style>
+                                </materialDesign:PackIcon>
+                                <ComboBox  SelectedItem="{Binding PortD}" materialDesign:HintAssist.Hint="PORT"  ItemsSource="{Binding Ports}"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                                <ComboBox x:Name="CmdD" Margin="5 0" ItemsSource="{Binding PortDCMDs }" SelectedIndex="0" IsEditable="True" materialDesign:HintAssist.Hint="COMMAND"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                                <Button Command="{s:Action Method=QueryD}" CommandParameter="{Binding ElementName=CmdD, Path=Text}"  Margin="2 0" VerticalAlignment="Bottom" Background="SkyBlue" BorderBrush="{x:Null}">Query</Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBox IsReadOnly="True" Margin="0 10" Grid.Row="1" Text="{Binding PortDBuffer}"                   
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"               
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="Data Feedback"
+                    />
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+        </ScrollViewer>
+    </materialDesign:TransitioningContent>
+</UserControl>

@@ -1,0 +1,151 @@
+﻿<UserControl x:Class="DAQ.HomeView" Foreground="DarkGray"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DAQ"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d"         
+             xmlns:s="https://github.com/canton7/Stylet"
+             d:DesignHeight="800" d:DesignWidth="1000"
+             d:DataContext="{d:DesignInstance  local:HomeViewModel}"
+             >
+    <UserControl.Resources>
+        <DataTemplate x:Key="HiPotSPEC">
+            <md:Card UniformCornerRadius="0.2" Margin="5">
+                <DockPanel Width="100">
+                    <StackPanel Margin="1">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="50" Foreground="Gray">Project</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding TestProject}"></TextBlock>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="50" Foreground="Gray">Voltage</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding TestVoltage}" ></TextBlock>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="50" Foreground="Gray">Current</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding TestCurrent}"></TextBlock>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="50" Foreground="Gray">Results</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding Results}"></TextBlock>
+                        </DockPanel>
+                        <md:PackIcon 
+                                        Height="35" 
+                                        Width="35"
+                                        x:Name="PI"
+                                        HorizontalAlignment="Center"
+                                   
+                                        >
+                            <md:PackIcon.Style>
+                                <Style TargetType="md:PackIcon">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TestResults }" Value="-1">
+                                            <Setter Property="Kind" Value="SmileySad"  />
+                                            <Setter Property="Foreground" Value="Red"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TestResults}" Value="0">
+                                            <Setter Property="Kind" Value="SmileyNeutral" />
+                                            <Setter Property="Foreground" Value="Yellow"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TestResults}" Value="1">
+                                            <Setter Property="Kind" Value="SmileyHappy"/>
+                                            <Setter Property="Foreground" Value="Green"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </md:PackIcon.Style>
+                        </md:PackIcon>
+                    </StackPanel>
+                </DockPanel>
+            </md:Card>
+        </DataTemplate>
+        <DataTemplate x:Key="TurnsSPEC">
+            <md:Card UniformCornerRadius="0.2" Margin="5">
+                <DockPanel Width="100">
+                    <StackPanel Margin="1">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="40" Foreground="Gray">Turns</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding TurnsResult,StringFormat={}{0:F2}}"></TextBlock>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="30" Foreground="Gray">Lxs</TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock   Text="{Binding LxsUhResult,StringFormat={}{0:F3}}"></TextBlock>
+                                <TextBlock>uH</TextBlock>
+                            </StackPanel>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Left" Width="50" Foreground="Gray">Phs</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding PhsResult}"></TextBlock>
+                        </DockPanel>
+                    </StackPanel>
+                </DockPanel>
+            </md:Card>
+        </DataTemplate>
+    </UserControl.Resources>
+    <md:TransitioningContent OpeningEffect="{md:TransitionEffect Kind=SlideInFromRight, Duration=00:00:0.5}">
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Top">
+                <Border Margin="0 10" BorderThickness="0 0 0 1" BorderBrush="DarkGray">
+                    <TextBlock FontSize="30">TH9320-S8A-1(Hi-Pot Test1)</TextBlock>
+                </Border>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" >
+                        <ItemsControl Height="auto" ItemTemplate="{StaticResource HiPotSPEC}" ItemsSource="{Binding tH9320PortA.TestSpecs}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+                <Border Margin="0 10" BorderThickness="0 0 0 1" BorderBrush="DarkGray">
+                    <TextBlock FontSize="30">TH9320-S8A-2(Hi-Pot Test2)</TextBlock>
+                </Border>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" >
+                        <ItemsControl Height="auto" ItemTemplate="{StaticResource HiPotSPEC}" ItemsSource="{Binding tH9320PortB.TestSpecs}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+                <Border Margin="0 10" BorderThickness="0 0 0 1" BorderBrush="DarkGray">
+                    <TextBlock FontSize="30">TH9320-S8A-3(Hi-Pot Test3)</TextBlock>
+                </Border>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" >
+                        <ItemsControl Height="auto" ItemTemplate="{StaticResource HiPotSPEC}" ItemsSource="{Binding tH9320PortC.TestSpecs}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+                <Border Margin="0 10" BorderThickness="0 0 0 1" BorderBrush="DarkGray">
+                    <TextBlock FontSize="30">TH2829X(LCR Test)</TextBlock>
+                </Border>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" >
+                    <ItemsControl Height="auto" ItemTemplate="{StaticResource TurnsSPEC}" ItemsSource="{Binding tH2829Port.TestSpecs}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </DockPanel>
+    </md:TransitioningContent>
+</UserControl>

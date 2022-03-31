@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Script.Methods" GeneratedClassName="ScriptSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PORT_A" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="PORT_B" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM4</Value>
+    </Setting>
+    <Setting Name="PORT_C" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM3</Value>
+    </Setting>
+    <Setting Name="PORT_D" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM2</Value>
+    </Setting>
+    <Setting Name="PLC_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="PLC_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6000</Value>
+    </Setting>
+    <Setting Name="PLC_RD" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">3600</Value>
+    </Setting>
+    <Setting Name="PLC_WD" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">3700</Value>
+    </Setting>
+    <Setting Name="PLC_WLen" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="PLC_RLen" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

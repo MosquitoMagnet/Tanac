@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FinsTcpDriver.cs~RF4bc78c2.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SerialPortStream" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Communication\Communication.csproj" />
+    <ProjectReference Include="..\DataService\DataService.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Communication.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)*$(TargetExt)&quot; &quot;$(SolutionDir)$(SolutionName).Shell\bin\Debug\netcoreapp3.1\Drivers&quot; /Y /S" />
+  </Target>
+
+</Project>

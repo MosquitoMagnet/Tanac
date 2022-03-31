@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Mv.Modules.TagManager.Views.Dialogs.AddGroupDlg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mv.Modules.TagManager.Views.Dialogs"
+             xmlns:vm="clr-namespace:Mv.Modules.TagManager.ViewModels.Dialogs"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance vm:AddGroupDlgViewModel, IsDesignTimeCreatable=True}"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             MinWidth="300"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Name"></TextBlock>
+            <TextBox Text="{Binding Name}"/>
+            <TextBlock Text="Dead Band"></TextBlock>
+            <TextBox Text="{Binding DeadBand}"/>
+            <TextBlock Text="UpdateRate"></TextBlock>
+            <TextBox Text="{Binding UpdateRate}"/>
+            <Grid>
+                <TextBlock Text="Active"></TextBlock>
+                <CheckBox HorizontalAlignment="Right" IsChecked="{Binding Active}"/>
+            </Grid>
+       
+            <Grid Margin="0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource MaterialDesignFlatButton}" 
+                 Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                  CommandParameter="OK">OK</Button>
+                <Button Style="{StaticResource MaterialDesignFlatButton}" 
+                  Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                  CommandParameter="Cancel"
+                    Grid.Column="1">CANCEL</Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

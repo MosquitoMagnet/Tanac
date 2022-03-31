@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Profinet\Freedom\" />
+    <Folder Include="Profinet\OpenProtocol\" />
+    <Folder Include="Robot\EFORT\" />
+    <Folder Include="Robot\FANUC\" />
+    <Folder Include="Robot\Hyundai\" />
+    <Folder Include="Robot\YAMAHA\" />
+    <Folder Include="Robot\YASKAWA\" />
+    <Folder Include="Robot\ABB\" />
+    <Folder Include="Robot\KUKA\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="SerialPortStream" Version="2.1.2" />
+  </ItemGroup>
+
+</Project>

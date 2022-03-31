@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Mv.Modules.TagManager.Views.Messages.MessageList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ctls="clr-namespace:Mv.Controls.Controls;assembly=MV.Controls"
+             xmlns:local="clr-namespace:Mv.Modules.TagManager.ViewModels.Messages"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             xmlns:pr="clr-namespace:Prism.Logging;assembly=Prism"
+             d:DataContext="{d:DesignInstance local:MessageListViewModel}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Animations.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Brushes.Navy.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource MaterialDesignHeadline6TextBlock}">消息中心</TextBlock>
+        <TabControl prism:RegionManager.RegionName="MsgTabRegion" Grid.Row="1" Background="Transparent">
+            <TabItem Header="全局信息">
+                <ListView ItemsSource="{Binding Messages}" ctls:ListScrollToEnd.IsScrollToEnd="True" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn  Header="时间" DisplayMemberBinding="{Binding Time, StringFormat={}{0:HH:mm:ss}}"/>
+                            <GridViewColumn Header="发送者" DisplayMemberBinding="{Binding Source}"/>
+                            <GridViewColumn Header="类型" DisplayMemberBinding="{Binding Level}" />
+                            <GridViewColumn Header="内容" DisplayMemberBinding="{Binding Content}"/>
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

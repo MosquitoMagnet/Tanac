@@ -1,0 +1,43 @@
+﻿<TabItem x:Class="Mv.Modules.TagManager.Views.Messages.MessageCenter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Mv.Modules.TagManager.Views.Messages"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+                      xmlns:tgm="clr-namespace:Mv.Modules.TagManager"
+             xmlns:prism="http://prismlibrary.com/"
+         prism:ViewModelLocator.AutoWireViewModel="True" >
+    <TabItem.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Animations.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Brushes.Navy.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </TabItem.Resources>
+    <TabItem.Header >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <materialDesign:PackIcon Kind="Message"  Foreground="{StaticResource LightGreyBackgroundBrush}"
+                                     HorizontalAlignment="Center" Height="22" Width="22" />
+            <TextBlock Grid.Row="2" Text="消息中心" HorizontalAlignment="Center"
+                       Foreground="{StaticResource LightGreyBackgroundBrush}"  FontSize="10" />
+        </Grid>
+    </TabItem.Header>
+    <Grid>
+        <!--<Image Source="/MV.Resources;component/Images/background1.jpg" Stretch="UniformToFill" Style="{StaticResource FadeInStyle}"/>-->
+        <Rectangle Grid.Row="0" Grid.RowSpan="4" Fill="#AAAAAAAA" Style="{StaticResource FadeInStyle}"/>
+        <local:MessageList/>
+    </Grid>
+</TabItem>
