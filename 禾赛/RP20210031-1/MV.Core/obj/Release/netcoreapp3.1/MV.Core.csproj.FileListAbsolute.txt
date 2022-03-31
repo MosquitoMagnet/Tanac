@@ -1,9 +1,0 @@
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\bin\Release\netcoreapp3.1\MV.Core.deps.json
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\bin\Release\netcoreapp3.1\MV.Core.dll
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\bin\Release\netcoreapp3.1\MV.Core.pdb
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.csprojAssemblyReference.cache
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.AssemblyInfoInputs.cache
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.AssemblyInfo.cs
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.csproj.CoreCompileInputs.cache
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.dll
-D:\软件开发相关\Mv-Axis\Mv-Axis\MV.Core\obj\Release\netcoreapp3.1\MV.Core.pdb
