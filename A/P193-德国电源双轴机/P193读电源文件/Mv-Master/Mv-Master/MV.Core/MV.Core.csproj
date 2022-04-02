@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MV.Core</AssemblyName>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>      
+  <ItemGroup>
+    <Compile Remove="Enumerations\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Enumerations\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Enumerations\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="Enumerations\**" />
+  </ItemGroup>
+</Project>

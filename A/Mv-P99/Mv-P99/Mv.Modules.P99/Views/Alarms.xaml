@@ -1,0 +1,144 @@
+﻿<TabItem x:Class="Mv.Modules.P99.Views.Alarms"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:localvm="clr-namespace:Mv.Modules.P99.ViewModels"
+             xmlns:local="clr-namespace:Mv.Modules.P99.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:controls1="clr-namespace:Mv.Controls.Controls;assembly=MV.Controls"
+         mc:Ignorable="d" 
+         d:DataContext="{d:DesignInstance  localvm:AlarmItemVm,IsDesignTimeCreatable=True}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <TabItem.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Brushes.Navy.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MV.Controls;component/Styles/Mv.Animations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </TabItem.Resources>
+    <TabItem.Header>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <materialDesign:PackIcon Kind="Alarm" Foreground="{StaticResource LightGreyBackgroundBrush}"
+                                     HorizontalAlignment="Center" Height="22" Width="22" />
+            <TextBlock Grid.Row="2" Text="报警信息" HorizontalAlignment="Center"
+                       Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10" />
+        </Grid>
+    </TabItem.Header>
+    <Grid Style="{StaticResource FloatInRightToLeftStyle}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="Header" BorderThickness="0 0 0 1" Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="{StaticResource LightGreyBackgroundBrush}">
+            <Grid  >
+                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock }" Margin="10" Foreground="{StaticResource PrimaryHueMidBrush}">运行信息</TextBlock>
+                <controls1:SimpleLed HorizontalAlignment="Right" State="{Binding IsConnected.Value}" Margin="10"
+                                                        OnColor="{DynamicResource PrimaryHueMidBrush}"
+                                                        OffColor="LightGray" />
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="10">
+            <TabControl>
+                <TabItem Header="报警信息">
+                    <ItemsControl ItemsSource="{Binding AlarmItems}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="20">
+                                    <Border Background="Gainsboro" CornerRadius="5" >
+                                        <Grid Height="100" Width="200">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <materialDesign:PackIcon  Kind="Bell" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Message}"></TextBlock>
+                                                <TextBlock Text="{Binding StartTime}"/>
+                                                <TextBlock>
+                                                    <Run Text="{Binding TimeStamp}"></Run>
+                                                    <Run Text=" S"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Grid>                                                                   
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </TabItem>
+                <TabItem Header="运行信息">
+                    <Grid>
+                        <WrapPanel Orientation="Horizontal">
+       
+                            <StackPanel Margin="20"  Orientation="Horizontal">
+                                <TextBlock>点胶相机NG</TextBlock>
+                                <TextBlock Text="{Binding GlueCameraNg}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>上料相机NG:</TextBlock>
+                                <TextBlock Text="{Binding LoadCameraNg}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>上料数量:</TextBlock>
+                                <TextBlock Text="{Binding LoadCount}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>扫码NG:</TextBlock>
+                                <TextBlock Text="{Binding ScanCodeNg}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>下料数量:</TextBlock>
+                                <TextBlock Text="{Binding UnloadCount}"></TextBlock>
+                                
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>开机时间:</TextBlock>
+                                <TextBlock Text="{Binding WorkTime}"></TextBlock>
+                                <TextBlock Text=" Min"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>运行时间:</TextBlock>
+                                <TextBlock Text="{Binding Runtime}"></TextBlock>
+                                <TextBlock Text="Min"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal">
+                                <TextBlock>停机时间:</TextBlock>
+                                <TextBlock Text="{Binding Downtime}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal">
+                                <TextBlock>待机时间:</TextBlock>
+                                <TextBlock Text="{Binding Idletime}"></TextBlock>
+                                <TextBlock Text="Min"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="20" Orientation="Horizontal" >
+                                <TextBlock>周期时间:</TextBlock>
+                                <TextBlock Text="{Binding Looptime}"></TextBlock>
+                                <TextBlock Text="S"></TextBlock>
+                            </StackPanel>
+  
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</TabItem>

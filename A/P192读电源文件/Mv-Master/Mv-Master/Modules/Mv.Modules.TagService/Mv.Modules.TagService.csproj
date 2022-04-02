@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Prism.Unity" Version="8.0.0.1740-pre" />
+      <PackageReference Include="PropertyTools.Wpf" Version="3.1.0-alpha0041" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\MV.UI\MV.UI.csproj" />
+    </ItemGroup>
+
+</Project>

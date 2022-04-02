@@ -1,0 +1,615 @@
+﻿<TabItem x:Class="Mv.Modules.P150.Views.Setting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mv.Modules.P150.Views"
+             xmlns:rs="clr-namespace:Mv.Modules.P150.Converters"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"           
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:ViewModel="clr-namespace:Mv.Modules.P150.ViewModels"
+             d:DataContext="{d:DesignInstance ViewModel:SettingViewModel}"
+             d:DesignHeight="450" d:DesignWidth="800" Header="Hive">
+    <TabItem.Resources>
+        <rs:FactoryVisiableConverter TargetFactory="AxisA" x:Key="AxisAVisibale"/>
+        <rs:FactoryVisiableConverter TargetFactory="AxisB" x:Key="AxisBVisibale"/>
+        <rs:FactoryVisiableConverter TargetFactory="Upload" x:Key="UploadVisibale"/>
+    </TabItem.Resources>
+    <StackPanel MaxWidth="700" Margin="10" >
+        <GroupBox Header="Select">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Factory"/>
+                    <ComboBox materialDesign:HintAssist.Hint="Axis" Width="200" ItemsSource="{Binding Factories}" materialDesign:HintAssist.IsFloating="True" Text="{Binding Factory}">
+                    </ComboBox>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisA CTQ" Visibility="{Binding Factory, Converter={StaticResource AxisAVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA1"  Width="100" Text="{Binding FA1_A}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA2" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA2_A}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA3" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA3_A}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                  <materialDesign:PackIcon Kind="Abc"/>
+                  <TextBox materialDesign:HintAssist.Hint="FA4" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA4_A}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                  <materialDesign:PackIcon Kind="Abc"/>
+                  <TextBox materialDesign:HintAssist.Hint="FA5" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA5_A}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                   <materialDesign:PackIcon Kind="Abc"/>
+                   <TextBox materialDesign:HintAssist.Hint="FA6" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA6_A}"></TextBox>
+                </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA7"  Width="100" Text="{Binding FA7_A}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA8" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA8_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA9" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA9_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA10" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA10_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA11" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA11_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA12" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA12_A}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA13"  Width="100" Text="{Binding FA13_A}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA14" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA14_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA15" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA15_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA16" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA16_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA17" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA17_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA18" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA18_A}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA19"  Width="100" Text="{Binding FA19_A}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA20" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA20_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA21" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA21_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA22" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA22_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA23" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA23_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA24" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA24_A}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA25"  Width="100" Text="{Binding FA25_A}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="Parallelism" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding Parallelism_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="Bending Pin Position" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding BendingPin_A}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding ImportACommand}" >ImportA</Button>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisA Material" Visibility="{Binding Factory, Converter={StaticResource AxisAVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="OD" Width="200" materialDesign:HintAssist.IsFloating="True" Text="{Binding OD_A}"></TextBox>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisA KPIV" Visibility="{Binding Factory, Converter={StaticResource AxisAVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension1" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A1}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension2" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A2}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension3" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A3}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension4" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A4}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension5" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A5}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension6" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A6}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension7" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_A7}"></TextBox>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisB CTQ" Visibility="{Binding Factory, Converter={StaticResource AxisBVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA1"  Width="100" Text="{Binding FA1_B}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA2" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA2_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA3" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA3_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA4" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA4_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA5" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA5_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA6" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA6_B}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA7"  Width="100" Text="{Binding FA7_B}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA8" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA8_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA9" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA9_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA10" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA10_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA11" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA11_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA12" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA12_B}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA13"  Width="100" Text="{Binding FA13_B}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA14" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA14_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA15" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA15_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA16" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA16_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA17" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA17_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA18" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA18_B}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA19"  Width="100" Text="{Binding FA19_B}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA20" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA20_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA21" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA21_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA22" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA22_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA23" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA23_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA24" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding FA24_B}"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="FA25"  Width="100" Text="{Binding FA25_B}" materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="Parallelism" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding Parallelism_B}"></TextBox> 
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Abc"/>
+                        <TextBox materialDesign:HintAssist.Hint="Bending Pin Position" materialDesign:HintAssist.IsFloating="True" Width="100" Text="{Binding BendingPin_B}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding ImportBCommand}" >ImportB</Button>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisB Material" Visibility="{Binding Factory, Converter={StaticResource AxisBVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="OD" Width="200" materialDesign:HintAssist.IsFloating="True" Text="{Binding OD_B}"></TextBox>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="AxisB KPIV" Visibility="{Binding Factory, Converter={StaticResource AxisBVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension8" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B1}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension9" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B2}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension10" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B3}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension11" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B4}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension12" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B5}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension13" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B6}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Abc"/>
+                    <TextBox materialDesign:HintAssist.Hint="Wire Tension14" Width="100" materialDesign:HintAssist.IsFloating="True" Text="{Binding WireTen_B7}"></TextBox>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="Upload CTQ" Visibility="{Binding Factory, Converter={StaticResource UploadVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA1</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA1}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA2</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA2}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA3</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA3}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA4</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA4}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA5</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA5}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA6</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA6}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA7</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA7}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA8</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA8}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA9</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA9}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA10</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA10}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA11</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA11}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA12</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA12}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA13</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA13}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA14</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA14}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA15</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA15}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA16</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA16}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA17</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA17}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA18</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA18}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA19</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA19}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA20</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA20}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA21</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA21}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA22</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA22}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA23</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA23}"></CheckBox>
+                    </StackPanel>
+                    
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA24</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA24}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">FA25</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isFA25}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Parallelism</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isParallelism}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Bending Pin Position</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isBendingPin}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="Upload Material" Visibility="{Binding Factory, Converter={StaticResource UploadVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">OD</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isOD}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Tool_cycles</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isUsageC}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">PM_cycles</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isUsageM}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="Upload KPIV" Visibility="{Binding Factory, Converter={StaticResource UploadVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Lower Mandrel Temperature</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isLower}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Write Tension</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isWireTen}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Mandrel gap1</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isGrap1}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Mandrel gap2</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isGrap2}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Mandrel gap3</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isGrap3}"></CheckBox>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Winding speed1</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isWspeed1}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Winding speed2</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isWspeed2}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Winding speed3</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isWspeed3}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Bending_speed</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isWspeedB}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Iron Speed</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isIspeed}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="Upload GermanPower" Visibility="{Binding Factory, Converter={StaticResource UploadVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Rstart</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isRstart}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Current</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isCurrent}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Voltage</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isVoltage}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Power</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isPower}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Rend</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isRend}"></CheckBox>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Bonding_Temp</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isBonding_Temp}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Bonding_Time</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isBonding_Time}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Tool_Temp</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isTool_Temp}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Bonding_Method</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isBonding_Method}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">RC1</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isRC1}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">RC2</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isRC2}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Header="Upload HIVE" Visibility="{Binding Factory, Converter={StaticResource UploadVisibale}}">
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Upload or Offline</TextBlock>
+                        <CheckBox  Width="30" IsChecked="{Binding isUpload}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <Button Margin="10" Command="{Binding SaveCommand}" >Save</Button>
+    </StackPanel>
+</TabItem>

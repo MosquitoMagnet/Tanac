@@ -1,0 +1,10 @@
+C:\Users\27299\source\repos\ExportData\ExportData\bin\Debug\ExportData.exe.config
+C:\Users\27299\source\repos\ExportData\ExportData\bin\Debug\ExportData.exe
+C:\Users\27299\source\repos\ExportData\ExportData\bin\Debug\ExportData.pdb
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.csprojAssemblyReference.cache
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.Form1.resources
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.Properties.Resources.resources
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.csproj.GenerateResource.cache
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.csproj.CoreCompileInputs.cache
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.exe
+C:\Users\27299\source\repos\ExportData\ExportData\obj\Debug\ExportData.pdb

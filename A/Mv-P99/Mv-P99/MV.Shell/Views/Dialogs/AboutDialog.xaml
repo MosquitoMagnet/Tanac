@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Mv.Shell.Views.Dialogs.AboutDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:dialogs="clr-namespace:Mv.Shell.Views.Dialogs"
+             xmlns:i18N="clr-namespace:Mv.Ui.Core.I18n;assembly=MV.UI"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Tag="About"
+             Style="{StaticResource MvDialogStyle}">
+
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Ellipse Grid.Row="0" Height="100" Width="100" Fill="#5458AF"/>
+        <Image Grid.Row="0" Source="pack://application:,,,/MV.Resources;component/Images/logo-background.png" Height="80" Width="80"/>
+
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center"
+                   Text="Motion And Vision"
+                   FontWeight="Bold" Foreground="#5458AF" FontSize="16"/>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock VerticalAlignment="Center">
+                <Run Text="0." />
+                <Run Text="0." />
+                <Run Text="1" />
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

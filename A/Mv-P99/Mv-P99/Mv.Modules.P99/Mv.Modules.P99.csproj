@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Mv.Modules.P99</AssemblyName>
+    <Platforms>AnyCPU;x86</Platforms>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ThridParty\**" />
+    <EmbeddedResource Remove="ThridParty\**" />
+    <None Remove="ThridParty\**" />
+    <Page Remove="ThridParty\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="background1.jpg" />
+    <None Remove="ViewModels\P99SettingsViewModel.cs~RF4bb057.TMP" />
+    <None Remove="Views\P99Settings.xaml~RF75eb60.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="15.0.5" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+    <PackageReference Include="SimpleTCP.Core" Version="1.0.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Communication\Communication.csproj" />
+    <ProjectReference Include="..\DataService\DataService.csproj" />
+    <ProjectReference Include="..\MV.Authentication\MV.Authentication.csproj" />
+    <ProjectReference Include="..\MV.Controls\MV.Controls.csproj" />
+    <ProjectReference Include="..\MV.UI\MV.UI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <Reference Include="PropertyTools">
+      <HintPath>..\Mv.Modules.TagManager\Library\PropertyTools.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="PropertyTools.Wpf">
+      <HintPath>..\Mv.Modules.TagManager\Library\PropertyTools.Wpf.dll</HintPath>
+    </Reference>
+   
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="background1.jpg" />
+  </ItemGroup>
+</Project>

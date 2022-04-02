@@ -1,0 +1,556 @@
+No.,Bit Address,Bit Address,Trigger Condition(0:OFF; 1:ON),Message,Hive,MessageHive,ErrorCode,Severity
+1,[PLC1]GGB000040900,MB37000,1,CPU警告/异常,TRUE,CPU warning/abnormal,N99PLOO-01-03,critical
+2,[PLC1]GGB000040901,MB37001,1,MECHATROLINK警报,TRUE,MECHATROLINK alarm,N03PLPO-06-03,critical
+3,[PLC1]GGB000040902,MB37002,1,CPU模式错误,TRUE,CPU mode error,N99PLOO-02-03,critical
+4,[PLC1]GGB000040903,MB37003,1,CPU电池警报,TRUE,CPU battery alarm,N99PLOO-03-03,critical
+5,[PLC1]GGB000040904,MB37004,1,CPU温度警告,TRUE,CPU temperature warning,N99PLOO-04-03,critical
+6,[PLC1]GGB000040905,MB37005,1,"相机与上位机软件通讯断开,请检查通讯链接！",TRUE,Camera and PC don't connect normally,N99PLOO-05-03,critical
+7,[PLC1]GGB000040906,MB37006,1,,TRUE,,,critical
+8,[PLC1]GGB000040907,MB37007,1,,TRUE,,,critical
+9,[PLC1]GGB000040908,MB37008,1,,TRUE,,,critical
+10,[PLC1]GGB000040909,MB37009,1,,TRUE,,,critical
+11,[PLC1]GGB00004090A,MB3700A,1,,TRUE,,,critical
+12,[PLC1]GGB00004090B,MB3700B,1,,TRUE,,,critical
+13,[PLC1]GGB00004090C,MB3700C,1,,TRUE,,,critical
+14,[PLC1]GGB00004090D,MB3700D,1,,TRUE,,,critical
+17,[PLC1]GGB000040910,MB37010,1,安全继电器报警,TRUE,Safety relay alarm,F99SSSE-01-03,critical
+18,[PLC1]GGB000040911,MB37011,1,1#架台前左安全门,TRUE,1#The front left safety door alarms,F02SCBO-03-10,critical
+19,[PLC1]GGB000040912,MB37012,1,1#架台前右安全门,TRUE,1#The front right safety door alarms,F02SCBO-04-10,critical
+20,[PLC1]GGB000040913,MB37013,1,1#架台侧左安全门,TRUE,1#The left safety door alarm of the stand,F02SCBO-06-10,critical
+21,[PLC1]GGB000040914,MB37014,1,1#架台侧右安全门,TRUE,1#Right safety door alarm,F02SCBO-05-10,critical
+22,[PLC1]GGB000040915,MB37015,1,2#架台前左安全门,TRUE,2#The front right safety door alarms,F02SCBO-07-10,critical
+23,[PLC1]GGB000040916,MB37016,1,2#架台前右安全门,TRUE,2#The left safety door alarm of the stand,F02SCBO-08-10,critical
+24,[PLC1]GGB000040917,MB37017,1,2#架台右侧安全门,TRUE,2#Right safety door alarm,F02SCBO-09-10,critical
+25,[PLC1]GGB000040918,MB37018,1,设备紧急停止状态,TRUE,Equipment emergency stop state,F01ESOO-10-05,critical
+26,[PLC1]GGB000040919,MB37019,1,,TRUE,,,critical
+27,[PLC1]GGB00004091A,MB3701A,1,,TRUE,,,critical
+28,[PLC1]GGB00004091B,MB3701B,1,,TRUE,,,critical
+29,[PLC1]GGB00004091C,MB3701C,1,,TRUE,,,critical
+30,[PLC1]GGB00004091D,MB3701D,1,,TRUE,,,critical
+33,[PLC1]GGB000040920,MB37020,1,,TRUE,,,critical
+34,[PLC1]GGB000040921,MB37021,1,,TRUE,,,critical
+35,[PLC1]GGB000040922,MB37022,1,,TRUE,,,critical
+36,[PLC1]GGB000040923,MB37023,1,,TRUE,,,critical
+37,[PLC1]GGB000040924,MB37024,1,,TRUE,,,critical
+38,[PLC1]GGB000040925,MB37025,1,,TRUE,,,critical
+39,[PLC1]GGB000040926,MB37026,1,,TRUE,,,critical
+40,[PLC1]GGB000040927,MB37027,1,,TRUE,,,critical
+41,[PLC1]GGB000040928,MB37028,1,,TRUE,,,critical
+42,[PLC1]GGB000040929,MB37029,1,,TRUE,,,critical
+43,[PLC1]GGB00004092A,MB3702A,1,,TRUE,,,critical
+44,[PLC1]GGB00004092B,MB3702B,1,,TRUE,,,critical
+45,[PLC1]GGB00004092C,MB3702C,1,,TRUE,,,critical
+46,[PLC1]GGB00004092D,MB3702D,1,,TRUE,,,critical
+49,[PLC1]GGB000040930,MB37030,1,,TRUE,,,critical
+50,[PLC1]GGB000040931,MB37031,1,,TRUE,,,critical
+51,[PLC1]GGB000040932,MB37032,1,,TRUE,,,critical
+52,[PLC1]GGB000040933,MB37033,1,,TRUE,,,critical
+53,[PLC1]GGB000040934,MB37034,1,,TRUE,,,critical
+54,[PLC1]GGB000040935,MB37035,1,,TRUE,,,critical
+55,[PLC1]GGB000040936,MB37036,1,,TRUE,,,critical
+56,[PLC1]GGB000040937,MB37037,1,,TRUE,,,critical
+57,[PLC1]GGB000040938,MB37038,1,,TRUE,,,critical
+58,[PLC1]GGB000040939,MB37039,1,,TRUE,,,critical
+59,[PLC1]GGB00004093A,MB3703A,1,,TRUE,,,critical
+60,[PLC1]GGB00004093B,MB3703B,1,,TRUE,,,critical
+61,[PLC1]GGB00004093C,MB3703C,1,,TRUE,,,critical
+62,[PLC1]GGB00004093D,MB3703D,1,,TRUE,,,critical
+65,[PLC1]GGB000040940,MB37040,1,,TRUE,,,critical
+66,[PLC1]GGB000040941,MB37041,1,,TRUE,,,critical
+67,[PLC1]GGB000040942,MB37042,1,,TRUE,,,critical
+68,[PLC1]GGB000040943,MB37043,1,,TRUE,,,critical
+69,[PLC1]GGB000040944,MB37044,1,,TRUE,,,critical
+70,[PLC1]GGB000040945,MB37045,1,,TRUE,,,critical
+71,[PLC1]GGB000040946,MB37046,1,,TRUE,,,critical
+72,[PLC1]GGB000040947,MB37047,1,,TRUE,,,critical
+73,[PLC1]GGB000040948,MB37048,1,,TRUE,,,critical
+74,[PLC1]GGB000040949,MB37049,1,,TRUE,,,critical
+75,[PLC1]GGB00004094A,MB3704A,1,,TRUE,,,critical
+76,[PLC1]GGB00004094B,MB3704B,1,,TRUE,,,critical
+77,[PLC1]GGB00004094C,MB3704C,1,,TRUE,,,critical
+78,[PLC1]GGB00004094D,MB3704D,1,,TRUE,,,critical
+81,[PLC1]GGB000041900,MB37100,1,工序1-0-0：IZ1轴伺服原点报警,TRUE,IZ1 axis servo origin alarm,M02GAA*-01-03,critical
+82,[PLC1]GGB000041901,MB37101,1,工序1-0-1：IZ1轴伺服报警,TRUE,IZ1 axis servo alarm,M99GAA*-02-03,critical
+83,[PLC1]GGB000041902,MB37102,1,工序1-0-2：IY1轴伺服原点报警,TRUE,IY1 axis servo origin alarm,M02GAA*-03-03,critical
+84,[PLC1]GGB000041903,MB37103,1,工序1-0-3：IY1轴伺服报警,TRUE,IY1 axis servo alarm,M99GAA*-04-03,critical
+85,[PLC1]GGB000041904,MB37104,1,工序1-0-4：1#机器人未运行报警,TRUE,1# Robot does not run alarm,M01RBRD-01-03,critical
+86,[PLC1]GGB000041905,MB37105,1,工序1-0-5：激光传感器检测骨架NG报警,TRUE,Laser sensor detects skeleton NG,S02SSSE-97-03,critical
+87,[PLC1]GGB000041906,MB37106,1,工序1-0-6：激光传感器READY报警,TRUE,Laser sensor READY alarm,S02SSSE-98-03,critical
+88,[PLC1]GGB000041907,MB37107,1,工序1-0-7：,TRUE,,,critical
+89,[PLC1]GGB000041908,MB37108,1,工序1-0-8：,TRUE,,,critical
+90,[PLC1]GGB000041909,MB37109,1,工序1-0-9：,TRUE,,,critical
+91,[PLC1]GGB00004190A,MB3710A,1,工序1-0-10：,TRUE,,,critical
+92,[PLC1]GGB00004190B,MB3710B,1,工序1-0-11：,TRUE,,,critical
+93,[PLC1]GGB00004190C,MB3710C,1,工序1-0-12：,TRUE,,,critical
+94,[PLC1]GGB00004190D,MB3710D,1,工序1-0-13：,TRUE,,,critical
+97,[PLC1]GGB000041910,MB37110,1,工序1-1-0：上料满盘分盘伸出原点报警,TRUE,Loading full trays origin alarm,C01PNSP-01-03,critical
+98,[PLC1]GGB000041911,MB37111,1,工序1-1-1：上料满盘分盘缩回动作报警,TRUE,Loading full trays action alarm,C02PNSP-02-03,critical
+99,[PLC1]GGB000041912,MB37112,1,工序1-1-2：上料空盘分盘伸出原点报警,TRUE,Loading empty trays origin alarm,C01PNSP-03-03,critical
+100,[PLC1]GGB000041913,MB37113,1,工序1-1-3：上料空盘分盘缩回动作报警,TRUE,Loading empty trays action alarm,C02PNSP-04-03,critical
+101,[PLC1]GGB000041914,MB37114,1,工序1-1-4：1#模具解锁上下上原点报警,TRUE,1# Mold unlock origin alarm,C01PNSP-05-03,critical
+102,[PLC1]GGB000041915,MB37115,1,工序1-1-5：1#模具解锁上下下动作报警,TRUE,1# Mold unlock action alarm,C02PNSP-06-03,critical
+103,[PLC1]GGB000041916,MB37116,1,工序1-1-6：2#模具解锁上下上原点报警,TRUE,2# Mold unlock origin alarm,C01PNSP-07-03,critical
+104,[PLC1]GGB000041917,MB37117,1,工序1-1-7：2#模具解锁上下下动作报警,TRUE,2# Mold unlock action alarm,C02PNSP-08-03,critical
+105,[PLC1]GGB000041918,MB37118,1,工序1-1-8：3#模具解锁上下上原点报警,TRUE,3# Mold unlock origin alarm,C01PNSP-09-03,critical
+106,[PLC1]GGB000041919,MB37119,1,工序1-1-9：3#模具解锁上下下动作报警,TRUE,3# Mold unlock action alarm,C02PNSP-10-03,critical
+107,[PLC1]GGB00004191A,MB3711A,1,工序1-1-10：4#模具解锁上下上原点报警,TRUE,4# Mold unlock origin alarm,C01PNSP-11-03,critical
+108,[PLC1]GGB00004191B,MB3711B,1,工序1-1-11：4#模具解锁上下下动作报警,TRUE,4# Mold unlock action alarm,C02PNSP-12-03,critical
+109,[PLC1]GGB00004191C,MB3711C,1,工序1-1-12：上料治具解锁前后后原点报警,TRUE,Unlock the origin of loading fixture alarm,C01PNSP-13-03,critical
+110,[PLC1]GGB00004191D,MB3711D,1,工序1-1-13：上料治具解锁前后前动作报警,TRUE,Unlock the action of loading fixture alarm,C02PNSP-14-03,critical
+113,[PLC1]GGB000041920,MB37120,1,工序1-2-0：上料骨架浮起检测后原点报警,TRUE,The frame floats the detection origin alarm,C01PNSP-15-03,critical
+114,[PLC1]GGB000041921,MB37121,1,工序1-2-1：上料骨架浮起检测前动作报警,TRUE,The frame floats the detection action alarm,C02PNSP-16-03,critical
+115,[PLC1]GGB000041922,MB37122,1,工序1-2-2：输送带上料定位锁下原点报警,TRUE,Feeding fixed lock origin alarm,C01PNSP-17-03,critical
+116,[PLC1]GGB000041923,MB37123,1,工序1-2-3：输送带上料定位锁上动作报警,TRUE,Feeding fixed lock action alarm,C02PNSP-18-03,critical
+117,[PLC1]GGB000041924,MB37124,1,工序1-2-4：上料满盘料仓缺料报警,TRUE,Alarm for lack of material in full silo,S02SSSE-99-06,critical
+118,[PLC1]GGB000041925,MB37125,1,工序1-2-5：上料空盘料仓满料报警,TRUE,Empty tray silo shortage alarm,S02SSSE-100-06,critical
+119,[PLC1]GGB000041926,MB37126,1,工序1-2-6:上料骨架浮起检测报警,TRUE,Frame floating alarm,S02SSSE-101-06,critical
+120,[PLC1]GGB000041927,MB37127,1,工序1-2-7：上料相机连续NG报警,TRUE,Load Camera continuous NG alarm,V04VSOO-09-15,critical
+121,[PLC1]GGB000041928,MB37128,1,工序1-2-8：上料安全光栅暂停信号,TRUE,Feeding safety grating pause signal,F02SCSE-24-15,critical
+122,[PLC1]GGB000041929,MB37129,1,工序1-2-9：上料料盘缺料提醒,TRUE,Reminder of material shortage,S02SSSE-102-06,critical
+123,[PLC1]GGB00004192A,MB3712A,1,工序1-2-10：上料空盘满料提醒,TRUE,Reminder of empty tray full,S02SSSE-103-06,critical
+124,[PLC1]GGB00004192B,MB3712B,1,工序1-2-11：,TRUE,,,critical
+125,[PLC1]GGB00004192C,MB3712C,1,工序1-2-12：,TRUE,,,critical
+126,[PLC1]GGB00004192D,MB3712D,1,工序1-2-13：,TRUE,,,critical
+129,[PLC1]GGB000041930,MB37130,1,工序1-3-0：上料电缸闭合超时报警,TRUE,Robot electric cylinder closing timeout alarm,M03SSM*-01-03,critical
+130,[PLC1]GGB000041931,MB37131,1,工序1-3-1：上料电缸张开超时报警,TRUE,Robot electric cylinder open overtime alarm,M03SSM*-02-03,critical
+131,[PLC1]GGB000041932,MB37132,1,工序1-3-2：上料搬运料盘未取下报警,TRUE,alarm when the feeding tray is not removed,S02SSSE-104-03,critical
+132,[PLC1]GGB000041933,MB37133,1,工序1-3-3：上料搬运料盘未回送完成报警,TRUE,Tray has not returned to complete the alarm,S02SSSE-105-03,critical
+133,[PLC1]GGB000041934,MB37134,1,工序1-3-4：,TRUE,,,critical
+134,[PLC1]GGB000041935,MB37135,1,工序1-3-5：,TRUE,,,critical
+135,[PLC1]GGB000041936,MB37136,1,工序1-3-6：,TRUE,,,critical
+136,[PLC1]GGB000041937,MB37137,1,工序1-3-7：,TRUE,,,critical
+137,[PLC1]GGB000041938,MB37138,1,工序1-3-8：,TRUE,,,critical
+138,[PLC1]GGB000041939,MB37139,1,工序1-3-9：,TRUE,,,critical
+139,[PLC1]GGB00004193A,MB3713A,1,工序1-3-10：,TRUE,,,critical
+140,[PLC1]GGB00004193B,MB3713B,1,工序1-3-11：,TRUE,,,critical
+141,[PLC1]GGB00004193C,MB3713C,1,工序1-3-12：,TRUE,,,critical
+142,[PLC1]GGB00004193D,MB3713D,1,工序1-3-13：,TRUE,,,critical
+145,[PLC1]GGB000041940,MB37140,1,工序1-4-0：1#机器人Error,TRUE,1# Robot Error,M01RBRD-02-03,critical
+146,[PLC1]GGB000041941,MB37141,1,工序1-4-1：1#机器人EstopOn,TRUE,1# Robot EstopOn,M01RBRD-03-03,critical
+147,[PLC1]GGB000041942,MB37142,1,工序1-4-2：1#机器人SError（严重报警）,TRUE,1# Robot SError (serious alarm),M01RBRD-04-03,critical
+148,[PLC1]GGB000041943,MB37143,1,工序1-4-3：1#机器人Warning（警告）,TRUE,1# Robot Warning (Warning),M01RBRD-05-03,critical
+149,[PLC1]GGB000041944,MB37144,1,工序1-4-4：上料电缸ALARM,TRUE,feeding electric cylinder ALARM,M06SSM*-17-03,critical
+150,[PLC1]GGB000041945,MB37145,1,工序1-4-5：1#架台气压检测报警,TRUE,1# rack pressure detection alarm,F99PSSR-14-03,critical
+151,[PLC1]GGB000041946,MB37146,1,工序1-4-6：安全继电器报警,TRUE,Safety relay alarm,F99SSSE-01-03,critical
+152,[PLC1]GGB000041947,MB37147,1,工序1-4-7：1#架台前左安全门报警,TRUE,1#The front left safety door alarms,F99PSSR-15-03,critical
+153,[PLC1]GGB000041948,MB37148,1,工序1-4-8：1#架台前右安全门报警,TRUE,1#The front right safety door alarms,F99PSSR-16-03,critical
+154,[PLC1]GGB000041949,MB37149,1,工序1-4-9：1#架台侧左安全门报警,TRUE,1#Side left safety door alarm,F99PSSR-17-03,critical
+155,[PLC1]GGB00004194A,MB3714A,1,工序1-4-10：1#架台侧右安全门报警,TRUE,1#Side right safety door alarm,F99PSSR-18-03,critical
+156,[PLC1]GGB00004194B,MB3714B,1,工序1-4-11：,TRUE,,,critical
+157,[PLC1]GGB00004194C,MB3714C,1,工序1-4-12：,TRUE,,,critical
+158,[PLC1]GGB00004194D,MB3714D,1,工序1-4-13：,TRUE,,,critical
+160,[PLC1]GGB000042900,MB37200,1,工序2-0-0：RY1轴伺服原点报警,TRUE,RY1 axis servo origin alarm,M02GAA*-05-03,critical
+161,[PLC1]GGB000042901,MB37201,1,工序2-0-1：RY1轴伺服报警,TRUE,RY1 axis servo alarm,M99GAA*-06-03,critical
+162,[PLC1]GGB000042902,MB37202,1,工序2-0-2：RZ1轴伺服原点报警,TRUE,RZ1 axis servo origin alarm,M02GAA*-07-03,critical
+163,[PLC1]GGB000042903,MB37203,1,工序2-0-3：RZ1轴伺服报警,TRUE,RZ1 axis servo alarm,M99GAA*-08-03,critical
+164,[PLC1]GGB000042904,MB37204,1,工序2-0-4：RX1轴伺服原点报警,TRUE,RX1 axis servo origin alarm,M02GAA*-19-03,critical
+165,[PLC1]GGB000042905,MB37205,1,工序2-0-5：RX1轴伺服报警,TRUE,RX1 axis servo alarm,M99GAA*-20-03,critical
+166,[PLC1]GGB000042906,MB37206,1,工序2-0-6：RY2轴伺服原点报警,TRUE,RY2 axis servo origin alarm,M02GAA*-11-03,critical
+167,[PLC1]GGB000042907,MB37207,1,工序2-0-7：RY2轴伺服报警,TRUE,RY2 axis servo alarm,M99GAA*-12-03,critical
+168,[PLC1]GGB000042908,MB37208,1,工序2-0-8：SP轴伺服原点报警,TRUE,SP axis servo origin alarm,M02GAA*-13-03,critical
+169,[PLC1]GGB000042909,MB37209,1,工序2-0-9：SP轴伺服报警,TRUE,SP axis servo alarm,M99GAA*-14-03,critical
+170,[PLC1]GGB00004290A,MB3720A,1,工序2-0-10：RY3轴伺服原点报警,TRUE,RY3 axis servo origin alarm,M02GAA*-15-03,critical
+171,[PLC1]GGB00004290B,MB3720B,1,工序2-0-11：RY3轴伺服报警,TRUE,RY3 axis servo alarm,M99GAA*-16-03,critical
+172,[PLC1]GGB00004290C,MB3720C,1,工序2-0-12：RZ2轴伺服原点报警,TRUE,RZ2 axis servo origin alarm,M02GAA*-17-03,critical
+173,[PLC1]GGB00004290D,MB3720D,1,工序2-0-13：RZ2轴伺服报警,TRUE,RZ2 axis servo alarm,M99GAA*-18-03,critical
+176,[PLC1]GGB000042910,MB37210,1,工序2-1-0：绕线夹子#1张动作报警,TRUE,Winding clip #1 sheet action alarm,C02PNSP-19-03,critical
+177,[PLC1]GGB000042911,MB37211,1,工序2-1-1：绕线夹子#2张动作报警,TRUE,Winding clip #2 sheet action alarm,C02PNSP-20-03,critical
+178,[PLC1]GGB000042912,MB37212,1,工序2-1-2：绕线夹子#3张动作报警,TRUE,Winding clip #3 sheet action alarm,C02PNSP-21-03,critical
+179,[PLC1]GGB000042913,MB37213,1,工序2-1-4：绕线夹子#4张动作报警,TRUE,Winding clip #4 sheet action alarm,C02PNSP-22-03,critical
+180,[PLC1]GGB000042914,MB37214,1,工序2-1-4：绕线取料左右左原点报警,TRUE,Reclaiming translation origin alarm,C01PNSP-111-03,critical
+181,[PLC1]GGB000042915,MB37215,1,工序2-1-5：绕线取料左右右动作报警,TRUE,Reclaiming translation action alarm,C02PNSP-112-03,critical
+182,[PLC1]GGB000042916,MB37216,1,工序2-1-6：绕线夹子扯线左原点报警,TRUE,The left origin alarm of the winding clamp,C01PNSP-23-03,critical
+183,[PLC1]GGB000042917,MB37217,1,工序2-1-7：绕线夹子扯线右动作报警,TRUE,The right action alarm of the winding clamp,C02PNSP-24-03,critical
+184,[PLC1]GGB000042918,MB37218,1,工序2-1-8：绕线夹子翻转0°原点报警,TRUE,Winding clamp turns over 0°rigin alarm,C01PNSP-25-03,critical
+185,[PLC1]GGB000042919,MB37219,1,工序2-1-9：绕线夹子翻转180°动作报警,TRUE,Winding clamp turns over 180°ction alarm,C02PNSP-26-03,critical
+186,[PLC1]GGB00004291A,MB3721A,1,工序2-1-10：导针翻转0°原点报警,TRUE,Guide pin turning 0°rigin alarm,C01PNSP-27-03,critical
+187,[PLC1]GGB00004291B,MB3721B,1,工序2-1-11：导针翻转90°动作报警,TRUE,Guide pin turns 90°action alarm,C02PNSP-28-03,critical
+188,[PLC1]GGB00004291C,MB3721C,1,工序2-1-12：主轴锁上原点报警,TRUE,Spindle lock origin alarm,C01PNSP-29-03,critical
+189,[PLC1]GGB00004291D,MB3721D,1,工序2-1-13：主轴锁下动作报警,TRUE,Spindle lock action alarm,C02PNSP-30-03,critical
+192,[PLC1]GGB000042920,MB37220,1,工序2-2-0：绕线治具锁上原点报警,TRUE,The winding jig locks the origin alarm,C01PNSP-31-03,critical
+193,[PLC1]GGB000042921,MB37221,1,工序2-2-1：绕线治具锁下动作报警,TRUE,Alarm when winding jig is locked,C02PNSP-32-03,critical
+194,[PLC1]GGB000042922,MB37222,1,工序2-2-2：输送带绕线定位锁下原点报警,TRUE,Winding fixed lock origin alarm,C01PNSP-33-03,critical
+195,[PLC1]GGB000042923,MB37223,1,工序2-2-3：输送带绕线定位锁上动作报警,TRUE,Winding fixed lock action alarm,C02PNSP-34-03,critical
+196,[PLC1]GGB000042924,MB37224,1,工序2-2-4：1#绕线取料夹爪张原点报警,TRUE,1#Reclaiming gripper origin alarm,C01PNSP-35-03,critical
+197,[PLC1]GGB000042925,MB37225,1,工序2-2-5：1#绕线取料夹爪闭动作报警,TRUE,1#Reclaiming gripper action alarm,C02PNSP-36-03,critical
+198,[PLC1]GGB000042926,MB37226,1,工序2-2-6：2#绕线取料夹爪张原点报警,TRUE,2#Reclaiming gripper origin alarm,C01PNSP-37-03,critical
+199,[PLC1]GGB000042927,MB37227,1,工序2-2-7：2#绕线取料夹爪闭动作报警,TRUE,2#Reclaiming gripper action alarm,C02PNSP-38-03,critical
+200,[PLC1]GGB000042928,MB37228,1,工序2-2-8：3#绕线取料夹爪张原点报警,TRUE,3#Reclaiming gripper origin alarm,C01PNSP-39-03,critical
+201,[PLC1]GGB000042929,MB37229,1,工序2-2-9：3#绕线取料夹爪闭动作报警,TRUE,3#Reclaiming gripper action alarm,C02PNSP-40-03,critical
+202,[PLC1]GGB00004292A,MB3722A,1,工序2-2-10：4#绕线取料夹爪张原点报警,TRUE,4#Reclaiming gripper origin alarm,C01PNSP-41-03,critical
+203,[PLC1]GGB00004292B,MB3722B,1,工序2-2-11：4#绕线取料夹爪闭动作报警,TRUE,4#Reclaiming gripper action alarm,C02PNSP-42-03,critical
+204,[PLC1]GGB00004292C,MB3722C,1,工序2-2-12：5#绕线取料夹爪张原点报警,TRUE,5#Reclaiming gripper origin alarm,C01PNSP-43-03,critical
+205,[PLC1]GGB00004292D,MB3722D,1,工序2-2-13：5#绕线取料夹爪闭动作报警,TRUE,5#Reclaiming gripper action alarm,C02PNSP-44-03,critical
+208,[PLC1]GGB000042930,MB37230,1,工序2-3-0：6#绕线取料夹爪张原点报警,TRUE,6#Reclaiming gripper origin alarm,C01PNSP-45-03,critical
+209,[PLC1]GGB000042931,MB37231,1,工序2-3-1：6#绕线取料夹爪闭动作报警,TRUE,6#Reclaiming gripper action alarm,C02PNSP-46-03,critical
+210,[PLC1]GGB000042932,MB37232,1,工序2-3-2：7#绕线取料夹爪张原点报警,TRUE,7#Reclaiming gripper origin alarm,C01PNSP-47-03,critical
+211,[PLC1]GGB000042933,MB37233,1,工序2-3-3：7#绕线取料夹爪闭动作报警,TRUE,7#Reclaiming gripper action alarm,C02PNSP-48-03,critical
+212,[PLC1]GGB000042934,MB37234,1,工序2-3-4：8#绕线取料夹爪张原点报警,TRUE,8#Reclaiming gripper origin alarm,C01PNSP-49-03,critical
+213,[PLC1]GGB000042935,MB37235,1,工序2-3-5：8#绕线取料夹爪闭动作报警,TRUE,8#Reclaiming gripper action alarm,C02PNSP-50-03,critical
+214,[PLC1]GGB000042936,MB37236,1,工序2-3-6：绕线断线报警,TRUE,Winding disconnection alarm,S02SSSE-01-03,critical
+215,[PLC1]GGB000042937,MB37237,1,工序2-3-7：,TRUE,,,critical
+216,[PLC1]GGB000042938,MB37238,1,工序2-3-8：,TRUE,,,critical
+217,[PLC1]GGB000042939,MB37239,1,工序2-3-9：上料站安全光栅,TRUE,Safety grating for loading station,F02SCSE-23-15,critical
+218,[PLC1]GGB00004293A,MB3723A,1,工序2-3-10：扫码枪左原点报警,TRUE,Scan translation origin alarm,C01PNSP-113-03,critical
+219,[PLC1]GGB00004293B,MB3723B,1,工序2-3-11：扫码枪右动作报警,TRUE,Scan translation action alarm,C02PNSP-114-03,critical
+220,[PLC1]GGB00004293C,MB3723C,1,工序2-3-12：数据上传超时报警,TRUE,Data upload timeout,N03PLPO-07-03,critical
+221,[PLC1]GGB00004293D,MB3723D,1,工序2-3-13：,TRUE,,,critical
+224,[PLC1]GGB000042940,MB37240,1,工序2-4-0：1#扫码枪超时报警,TRUE,1#Scan code gun timeout alarm,T06VSOO-01-03,critical
+225,[PLC1]GGB000042941,MB37241,1,工序2-4-1：2#扫码枪超时报警,TRUE,2#Scan code gun timeout alarm,T06VSOO-02-03,critical
+226,[PLC1]GGB000042942,MB37242,1,工序2-4-2：3#扫码枪超时报警,TRUE,3#Scan code gun timeout alarm,T06VSOO-03-03,critical
+227,[PLC1]GGB000042943,MB37243,1,工序2-4-3：4#扫码枪超时报警,TRUE,4#Scan code gun timeout alarm,T06VSOO-04-03,critical
+228,[PLC1]GGB000042944,MB37244,1,工序2-4-4：,TRUE,,,critical
+229,[PLC1]GGB000042945,MB37245,1,工序2-4-5：,TRUE,,,critical
+230,[PLC1]GGB000042946,MB37246,1,工序2-4-6：,TRUE,,,critical
+231,[PLC1]GGB000042947,MB37247,1,工序2-4-7：,TRUE,,,critical
+232,[PLC1]GGB000042948,MB37248,1,工序2-4-8：,TRUE,,,critical
+233,[PLC1]GGB000042949,MB37249,1,工序2-4-9：,TRUE,,,critical
+234,[PLC1]GGB00004294A,MB3724A,1,工序2-4-10：,TRUE,,,critical
+235,[PLC1]GGB00004294B,MB3724B,1,工序2-4-11：,TRUE,,,critical
+236,[PLC1]GGB00004294C,MB3724C,1,工序2-4-12：,TRUE,,,critical
+237,[PLC1]GGB00004294D,MB3724D,1,工序2-4-13：,TRUE,,,critical
+240,[PLC1]GGB000043900,MB37300,1,工序3-0-0：DX1轴伺服原点报警,TRUE,DX1 axis servo origin alarm,M02GAA*-21-03,critical
+241,[PLC1]GGB000043901,MB37301,1,工序3-0-1：DX1轴伺服报警,TRUE,DX1 axis servo alarm,M99GAA*-22-03,critical
+242,[PLC1]GGB000043902,MB37302,1,工序3-0-2：DY1轴伺服原点报警,TRUE,DY1 axis servo origin alarm,M02GAA*-23-03,critical
+243,[PLC1]GGB000043903,MB37303,1,工序3-0-3：DY1轴伺服报警,TRUE,DY1 axis servo alarm,M99GAA*-24-03,critical
+244,[PLC1]GGB000043904,MB37304,1,工序3-0-4：DZ1轴伺服原点报警,TRUE,DZ1 axis servo origin alarm,M02GAA*-25-03,critical
+245,[PLC1]GGB000043905,MB37305,1,工序3-0-5：DZ1轴伺服报警,TRUE,DZ1 axis servo alarm,M99GAA*-26-03,critical
+246,[PLC1]GGB000043906,MB37306,1,工序3-0-6：DX2轴伺服原点报警,TRUE,DX2 axis servo origin alarm,M02GAA*-27-03,critical
+247,[PLC1]GGB000043907,MB37307,1,工序3-0-7：DX2轴伺服报警,TRUE,DX2 axis servo alarm,M99GAA*-28-03,critical
+248,[PLC1]GGB000043908,MB37308,1,工序3-0-8：DY2轴伺服原点报警,TRUE,DY2 axis servo origin alarm,M02GAA*-29-03,critical
+249,[PLC1]GGB000043909,MB37309,1,工序3-0-9：DY2轴伺服报警,TRUE,DY2 axis servo alarm,M99GAA*-30-03,critical
+250,[PLC1]GGB00004390A,MB3730A,1,工序3-0-10：DZ2轴伺服原点报警,TRUE,DZ2 axis servo origin alarm,M02GAA*-31-03,critical
+251,[PLC1]GGB00004390B,MB3730B,1,工序3-0-11：DZ2轴伺服报警,TRUE,DZ2 axis servo alarm,M99GAA*-32-03,critical
+252,[PLC1]GGB00004390C,MB3730C,1,工序3-0-12：,TRUE,,,critical
+253,[PLC1]GGB00004390D,MB3730D,1,工序3-0-13：,TRUE,,,critical
+256,[PLC1]GGB000043910,MB37310,1,工序3-1-0：输送带点胶定位锁下原点报警,TRUE,Dispensing fixed lock origin alarm,C01PNSP-52-03,critical
+257,[PLC1]GGB000043911,MB37311,1,工序3-1-1：输送带点胶定位锁上动作报警,TRUE,Dispensing fixed lock origin alarm,C02PNSP-53-03,critical
+258,[PLC1]GGB000043912,MB37312,1,工序3-1-2：相机READY报警,TRUE,Camera READY alarm,V04VSOO-10-15,critical
+259,[PLC1]GGB000043913,MB37313,1,工序3-1-3：,TRUE,,,critical
+260,[PLC1]GGB000043914,MB37314,1,工序3-1-4：1#相机拍照超时报警,TRUE,1# Camera overtime alarm,V03VSOO-01-15,critical
+261,[PLC1]GGB000043915,MB37315,1,工序3-1-5：2#相机拍照超时报警,TRUE,2# Camera overtime alarm,V03VSOO-02-15,critical
+262,[PLC1]GGB000043916,MB37316,1,工序3-1-6：3#相机拍照超时报警,TRUE,3# Camera overtime alarm,V03VSOO-03-15,critical
+263,[PLC1]GGB000043917,MB37317,1,工序3-1-7：4#相机拍照超时报警,TRUE,4# Camera overtime alarm,V03VSOO-04-15,critical
+264,[PLC1]GGB000043918,MB37318,1,工序3-1-8：,TRUE,,,critical
+265,[PLC1]GGB000043919,MB37319,1,工序3-1-9：,TRUE,,,critical
+266,[PLC1]GGB00004391A,MB3731A,1,工序3-1-10：,TRUE,,,critical
+267,[PLC1]GGB00004391B,MB3731B,1,工序3-1-11：,TRUE,,,critical
+268,[PLC1]GGB00004391C,MB3731C,1,工序3-1-12：,TRUE,,,critical
+269,[PLC1]GGB00004391D,MB3731D,1,工序3-1-13：,TRUE,,,critical
+,,,,,,,,
+,,,,,,,,
+272,[PLC1]GGB000043920,MB37320,1,工序3-2-0：1#相机连续NG报警,TRUE,1# Camera continuous NG alarm,V04VSOO-05-15,critical
+273,[PLC1]GGB000043921,MB37321,1,工序3-2-1：2#相机连续NG报警,TRUE,2# Camera continuous NG alarm,V04VSOO-06-15,critical
+274,[PLC1]GGB000043922,MB37322,1,工序3-2-2：3#相机连续NG报警,TRUE,3# Camera continuous NG alarm,V04VSOO-07-15,critical
+275,[PLC1]GGB000043923,MB37323,1,工序3-2-3：4#相机连续NG报警,TRUE,4# Camera continuous NG alarm,V04VSOO-08-15,critical
+276,[PLC1]GGB000043924,MB37324,1,工序3-2-4：点胶擦胶布缺料报警,TRUE,Dispensing and cleaning tape shortage alarm11,C02PNSP-54-03,critical
+277,[PLC1]GGB000043925,MB37325,1,工序3-2-5：1#点胶机气压检测下限报警,TRUE,1# Air pressure detection lower limit alarm,C02PNSP-55-03,critical
+278,[PLC1]GGB000043926,MB37326,1,工序3-2-6：2#点胶机气压检测下限报警,TRUE,2# Air pressure detection lower limit alarm,C02PNSP-56-03,critical
+279,[PLC1]GGB000043927,MB37327,1,工序3-2-7：,TRUE,,,critical
+280,[PLC1]GGB000043928,MB37328,1,工序3-2-8：,TRUE,,,critical
+281,[PLC1]GGB000043929,MB37329,1,工序3-2-9：,TRUE,,,critical
+282,[PLC1]GGB00004392A,MB3732A,1,工序3-2-10：,TRUE,,,critical
+283,[PLC1]GGB00004392B,MB3732B,1,工序3-2-11：,TRUE,,,critical
+284,[PLC1]GGB00004392C,MB3732C,1,工序3-2-12：,TRUE,,,critical
+285,[PLC1]GGB00004392D,MB3732D,1,工序3-2-13：,TRUE,,,critical
+,,,,,,,,
+,,,,,,,,
+288,[PLC1]GGB000043930,MB37330,1,工序3-3-0：,TRUE,,,critical
+289,[PLC1]GGB000043931,MB37331,1,工序3-3-1：,TRUE,,,critical
+290,[PLC1]GGB000043932,MB37332,1,工序3-3-2：,TRUE,,,critical
+291,[PLC1]GGB000043933,MB37333,1,工序3-3-3：,TRUE,,,critical
+292,[PLC1]GGB000043934,MB37334,1,工序3-3-4：,TRUE,,,critical
+293,[PLC1]GGB000043935,MB37335,1,工序3-3-5：,TRUE,,,critical
+294,[PLC1]GGB000043936,MB37336,1,工序3-3-6：,TRUE,,,critical
+295,[PLC1]GGB000043937,MB37337,1,工序3-3-7：,TRUE,,,critical
+296,[PLC1]GGB000043938,MB37338,1,工序3-3-8：,TRUE,,,critical
+297,[PLC1]GGB000043939,MB37339,1,工序3-3-9：,TRUE,,,critical
+298,[PLC1]GGB00004393A,MB3733A,1,工序3-3-10：,TRUE,,,critical
+299,[PLC1]GGB00004393B,MB3733B,1,工序3-3-11：,TRUE,,,critical
+300,[PLC1]GGB00004393C,MB3733C,1,工序3-3-12：,TRUE,,,critical
+301,[PLC1]GGB00004393D,MB3733D,1,工序3-3-13：,TRUE,,,critical
+,,,,,,,,
+,,,,,,,,
+304,[PLC1]GGB000043940,MB37340,1,工序3-4-0：,TRUE,,,critical
+305,[PLC1]GGB000043941,MB37341,1,工序3-4-1：,TRUE,,,critical
+306,[PLC1]GGB000043942,MB37342,1,工序3-4-2：,TRUE,,,critical
+307,[PLC1]GGB000043943,MB37343,1,工序3-4-3：,TRUE,,,critical
+308,[PLC1]GGB000043944,MB37344,1,工序3-4-4：,TRUE,,,critical
+309,[PLC1]GGB000043945,MB37345,1,工序3-4-5：,TRUE,,,critical
+310,[PLC1]GGB000043946,MB37346,1,工序3-4-6：,TRUE,,,critical
+311,[PLC1]GGB000043947,MB37347,1,工序3-4-7：,TRUE,,,critical
+312,[PLC1]GGB000043948,MB37348,1,工序3-4-8：,TRUE,,,critical
+313,[PLC1]GGB000043949,MB37349,1,工序3-4-9：,TRUE,,,critical
+314,[PLC1]GGB00004394A,MB3734A,1,工序3-4-10：,TRUE,,,critical
+315,[PLC1]GGB00004394B,MB3734B,1,工序3-4-11：,TRUE,,,critical
+316,[PLC1]GGB00004394C,MB3734C,1,工序3-4-12：,TRUE,,,critical
+317,[PLC1]GGB00004394D,MB3734D,1,工序3-4-13：,TRUE,,,critical
+320,[PLC1]GGB000044900,MB37400,1,工序4-0-0：,TRUE,,,critical
+321,[PLC1]GGB000044901,MB37401,1,工序4-0-1：,TRUE,,,critical
+322,[PLC1]GGB000044902,MB37402,1,工序4-0-2：,TRUE,,,critical
+323,[PLC1]GGB000044903,MB37403,1,工序4-0-3：,TRUE,,,critical
+324,[PLC1]GGB000044904,MB37404,1,工序4-0-4：,TRUE,,,critical
+325,[PLC1]GGB000044905,MB37405,1,工序4-0-5：,TRUE,,,critical
+326,[PLC1]GGB000044906,MB37406,1,工序4-0-6：,TRUE,,,critical
+327,[PLC1]GGB000044907,MB37407,1,工序4-0-7：,TRUE,,,critical
+328,[PLC1]GGB000044908,MB37408,1,工序4-0-8：,TRUE,,,critical
+329,[PLC1]GGB000044909,MB37409,1,工序4-0-9：,TRUE,,,critical
+330,[PLC1]GGB00004490A,MB3740A,1,工序4-0-10：,TRUE,,,critical
+331,[PLC1]GGB00004490B,MB3740B,1,工序4-0-11：,TRUE,,,critical
+332,[PLC1]GGB00004490C,MB3740C,1,工序4-0-12：,TRUE,,,critical
+333,[PLC1]GGB00004490D,MB3740D,1,工序4-0-13：,TRUE,,,critical
+336,[PLC1]GGB000044910,MB37410,1,工序4-1-0：UV灯前后后原点报警,TRUE,UV lamp back origin alarm,C01PNSP-57-03,critical
+337,[PLC1]GGB000044911,MB37411,1,工序4-1-1：UV灯前后前动作报警,TRUE,UV lamp moves forward alarm,C02PNSP-58-03,critical
+338,[PLC1]GGB000044912,MB37412,1,工序4-1-2：UV灯上原点报警,TRUE,UV lamp upward origin alarm,C01PNSP-59-03,critical
+339,[PLC1]GGB000044913,MB37413,1,工序4-1-3：UV灯下动作报警,TRUE,UV lamp down action alarm,C02PNSP-60-03,critical
+340,[PLC1]GGB000044914,MB37414,1,工序4-1-4：脱PIN左右右原点报警,TRUE,Alarm to the right origin after PIN off,C01PNSP-61-03,critical
+341,[PLC1]GGB000044915,MB37415,1,工序4-1-5：脱PIN左右左动作报警,TRUE,PIN off and left action alarm,C02PNSP-62-03,critical
+342,[PLC1]GGB000044916,MB37416,1,工序4-1-6：脱PIN前后后原点报警,TRUE,PIN off and back to the origin alarm,C01PNSP-63-03,critical
+343,[PLC1]GGB000044917,MB37417,1,工序4-1-7：脱PIN前后前动作报警,TRUE,Take off PIN forward action alarm,C02PNSP-64-03,critical
+344,[PLC1]GGB000044918,MB37418,1,工序4-1-8：脱PIN上原点报警,TRUE,Origin alarm on PIN off,C01PNSP-65-03,critical
+345,[PLC1]GGB000044919,MB37419,1,工序4-1-9：脱PIN下动作报警,TRUE,Action alarm when PIN is removed,C02PNSP-66-03,critical
+346,[PLC1]GGB00004491A,MB3741A,1,工序4-1-10：剪刀后原点报警,TRUE,Origin alarm after scissors,C01PNSP-67-03,critical
+347,[PLC1]GGB00004491B,MB3741B,1,工序4-1-11：剪刀前动作报警,TRUE,Alarm before scissors,C02PNSP-68-03,critical
+348,[PLC1]GGB00004491C,MB3741C,1,工序4-1-12：剪刀右原点报警,TRUE,Scissors right origin alarm,C01PNSP-69-03,critical
+349,[PLC1]GGB00004491D,MB3741D,1,工序4-1-13：剪刀左动作报警,TRUE,Scissors left action alarm,C02PNSP-70-03,critical
+352,[PLC1]GGB000044920,MB37420,1,工序4-2-0：剪刀上原点报警,TRUE,Alarm on the origin of the scissors,C01PNSP-71-03,critical
+353,[PLC1]GGB000044921,MB37421,1,工序4-2-1：剪刀下动作报警,TRUE,Scissors action alarm,C02PNSP-72-03,critical
+354,[PLC1]GGB000044922,MB37422,1,工序4-2-2：输送带剪线定位锁下原点报警,TRUE,Trimming fixed lock origin alarm,C01PNSP-73-03,critical
+355,[PLC1]GGB000044923,MB37423,1,工序4-2-3：输送带剪线定位锁上动作报警,TRUE,Trimming fixed lock action alarm,C02PNSP-74-03,critical
+356,[PLC1]GGB000044924,MB37424,1,工序4-2-4：剪刀旋转0°原点报警,TRUE,Scissors rotate 0°rigin alarm,C01PNSP-75-03,critical
+357,[PLC1]GGB000044925,MB37425,1,工序4-2-5：剪刀旋转90°动作报警,TRUE,Scissors rotate 90°action alarm,C02PNSP-76-03,critical
+358,[PLC1]GGB000044926,MB37426,1,工序4-2-6：固化UV灯报警,TRUE,Curing UV lamp alarm,O99SSSE-04-03,critical
+359,[PLC1]GGB000044927,MB37427,1,工序4-2-7：,TRUE,,,critical
+360,[PLC1]GGB000044928,MB37428,1,工序4-2-8：,TRUE,,,critical
+361,[PLC1]GGB000044929,MB37429,1,工序4-2-9：,TRUE,,,critical
+362,[PLC1]GGB00004492A,MB3742A,1,工序4-2-10：,TRUE,,,critical
+363,[PLC1]GGB00004492B,MB3742B,1,工序4-2-11：,TRUE,,,critical
+364,[PLC1]GGB00004492C,MB3742C,1,工序4-2-12：,TRUE,,,critical
+365,[PLC1]GGB00004492D,MB3742D,1,工序4-2-13：,TRUE,,,critical
+368,[PLC1]GGB000044930,MB37430,1,工序4-3-0：,TRUE,,,critical
+369,[PLC1]GGB000044931,MB37431,1,工序4-3-1：,TRUE,,,critical
+370,[PLC1]GGB000044932,MB37432,1,工序4-3-2：,TRUE,,,critical
+371,[PLC1]GGB000044933,MB37433,1,工序4-3-3：,TRUE,,,critical
+372,[PLC1]GGB000044934,MB37434,1,工序4-3-4：,TRUE,,,critical
+373,[PLC1]GGB000044935,MB37435,1,工序4-3-5：,TRUE,,,critical
+374,[PLC1]GGB000044936,MB37436,1,工序4-3-6：,TRUE,,,critical
+375,[PLC1]GGB000044937,MB37437,1,工序4-3-7：,TRUE,,,critical
+376,[PLC1]GGB000044938,MB37438,1,工序4-3-8：,TRUE,,,critical
+377,[PLC1]GGB000044939,MB37439,1,工序4-3-9：,TRUE,,,critical
+378,[PLC1]GGB00004493A,MB3743A,1,工序4-3-10：,TRUE,,,critical
+379,[PLC1]GGB00004493B,MB3743B,1,工序4-3-11：,TRUE,,,critical
+380,[PLC1]GGB00004493C,MB3743C,1,工序4-3-12：,TRUE,,,critical
+381,[PLC1]GGB00004493D,MB3743D,1,工序4-3-13：,TRUE,,,critical
+384,[PLC1]GGB000044940,MB37440,1,工序4-4-0：,TRUE,,,critical
+385,[PLC1]GGB000044941,MB37441,1,工序4-4-1：,TRUE,,,critical
+386,[PLC1]GGB000044942,MB37442,1,工序4-4-2：,TRUE,,,critical
+387,[PLC1]GGB000044943,MB37443,1,工序4-4-3：,TRUE,,,critical
+388,[PLC1]GGB000044944,MB37444,1,工序4-4-4：,TRUE,,,critical
+389,[PLC1]GGB000044945,MB37445,1,工序4-4-5：,TRUE,,,critical
+390,[PLC1]GGB000044946,MB37446,1,工序4-4-6：,TRUE,,,critical
+391,[PLC1]GGB000044947,MB37447,1,工序4-4-7：,TRUE,,,critical
+392,[PLC1]GGB000044948,MB37448,1,工序4-4-8：,TRUE,,,critical
+393,[PLC1]GGB000044949,MB37449,1,工序4-4-9：,TRUE,,,critical
+394,[PLC1]GGB00004494A,MB3744A,1,工序4-4-10：,TRUE,,,critical
+395,[PLC1]GGB00004494B,MB3744B,1,工序4-4-11：,TRUE,,,critical
+396,[PLC1]GGB00004494C,MB3744C,1,工序4-4-12：,TRUE,,,critical
+397,[PLC1]GGB00004494D,MB3744D,1,工序4-4-13：,TRUE,,,critical
+400,[PLC1]GGB000045900,MB37500,1,工序5-0-0：OZ1轴伺服原点报警,TRUE,OZ1 axis servo origin alarm,M02GAA*-37-03,critical
+401,[PLC1]GGB000045901,MB37501,1,工序5-0-1：OZ1轴伺服报警,TRUE,OZ1 axis servo alarm,M99GAA*-38-03,critical
+402,[PLC1]GGB000045902,MB37502,1,工序5-0-2：OY1轴伺服原点报警,TRUE,OY1 axis servo origin alarm,M02GAA*-35-03,critical
+403,[PLC1]GGB000045903,MB37503,1,工序5-0-3：OY1轴伺服报警,TRUE,OY1 axis servo alarm,M99GAA*-36-03,critical
+404,[PLC1]GGB000045904,MB37504,1,工序5-0-4：2#下料机器人未运行报警,TRUE,2# The robot is not running alarm,M01RBRD-06-03,critical
+405,[PLC1]GGB000045905,MB37505,1,工序5-0-5：,TRUE,,,critical
+406,[PLC1]GGB000045906,MB37506,1,工序5-0-6：,TRUE,,,critical
+407,[PLC1]GGB000045907,MB37507,1,工序5-0-7：,TRUE,,,critical
+408,[PLC1]GGB000045908,MB37508,1,工序5-0-8：,TRUE,,,critical
+409,[PLC1]GGB000045909,MB37509,1,工序5-0-9：,TRUE,,,critical
+410,[PLC1]GGB00004590A,MB3750A,1,工序5-0-10：,TRUE,,,critical
+411,[PLC1]GGB00004590B,MB3750B,1,工序5-0-11：,TRUE,,,critical
+412,[PLC1]GGB00004590C,MB3750C,1,工序5-0-12：,TRUE,,,critical
+413,[PLC1]GGB00004590D,MB3750D,1,工序5-0-13：,TRUE,,,critical
+416,[PLC1]GGB000045910,MB37510,1,工序5-1-0：下料治具解锁上原点报警,TRUE,Jig unlocked upper origin alarm,C01PNSP-77-03,critical
+417,[PLC1]GGB000045911,MB37511,1,工序5-1-1：下料治具解锁下动作报警,TRUE,Action alarm when the fixture is unlocked,C02PNSP-78-03,critical
+418,[PLC1]GGB000045912,MB37512,1,工序5-1-2：下料治具解锁前后后原点报警,TRUE,Origin alarm after the fixture is unlocked,C01PNSP-79-03,critical
+419,[PLC1]GGB000045913,MB37513,1,工序5-1-3：下料治具解锁前后前动作报警,TRUE,Action alarm before the fixture is unlocked,C02PNSP-80-03,critical
+420,[PLC1]GGB000045914,MB37514,1,工序5-1-4：取料翻转上原点报警,TRUE,The upper origin alarm of reclaiming flip,C01PNSP-81-03,critical
+421,[PLC1]GGB000045915,MB37515,1,工序5-1-5：取料翻转下动作报警,TRUE,Action alarm under reclaiming flip,C02PNSP-82-03,critical
+422,[PLC1]GGB000045916,MB37516,1,工序5-1-6：取料翻转0°原点报警,TRUE,Reclaiming and turning 0°rigin alarm,C01PNSP-83-03,critical
+423,[PLC1]GGB000045917,MB37517,1,工序5-1-7：取料翻转180°动作报警,TRUE,Reclaiming 180°action alarm,C02PNSP-84-03,critical
+424,[PLC1]GGB000045918,MB37518,1,工序5-1-8：下料满盘分盘伸出原点报警,TRUE,Discharge full trays origin alarm,C01PNSP-85-03,critical
+425,[PLC1]GGB000045919,MB37519,1,工序5-1-9：下料满盘分盘缩回动作报警,TRUE,Discharge full trays action alarm,C02PNSP-86-03,critical
+426,[PLC1]GGB00004591A,MB3751A,1,工序5-1-10：下料空盘分盘伸出原点报警,TRUE,Discharge empty trays origin alarm,C01PNSP-87-03,critical
+427,[PLC1]GGB00004591B,MB3751B,1,工序5-1-11：下料空盘分盘缩回动作报警,TRUE,Discharge empty trays action alarm,C02PNSP-88-03,critical
+428,[PLC1]GGB00004591C,MB3751C,1,工序5-1-12：输送带下料定位锁下原点报警,TRUE,Discharge fixed lock origin alarm,C01PNSP-89-03,critical
+429,[PLC1]GGB00004591D,MB3751D,1,工序5-1-13：输送带下料定位锁上动作报警,TRUE,Discharge fixed lock action alarm,C02PNSP-90-03,critical
+432,[PLC1]GGB000045920,MB37520,1,工序5-2-0：下料满盘料仓满料报警,TRUE,Full pan silo full material alarm,C01PNSP-91-05,critical
+433,[PLC1]GGB000045921,MB37521,1,工序5-2-1：下料空盘料仓缺料报警,TRUE,Empty tray silo shortage alarm,C01PNSP-92-06,critical
+434,[PLC1]GGB000045922,MB37522,1,工序5-2-2：下料安全光栅暂停信号,TRUE,Unloading safety grating pause signal,F02SCSE-25-15,critical
+435,[PLC1]GGB000045923,MB37523,1,工序5-2-3：下料空盘料仓缺料提醒,TRUE,Reminder of empty stock bin shortage,C01PNSP-93-06,critical
+436,[PLC1]GGB000045924,MB37524,1,工序5-2-4：下料满盘料仓满料提醒,TRUE,Reminder of full material bin full,C01PNSP-94-05,critical
+437,[PLC1]GGB000045925,MB37525,1,工序5-2-5：,TRUE,,,critical
+438,[PLC1]GGB000045926,MB37526,1,工序5-2-6：,TRUE,,,critical
+439,[PLC1]GGB000045927,MB37527,1,工序5-2-7：,TRUE,,,critical
+440,[PLC1]GGB000045928,MB37528,1,工序5-2-8：,TRUE,,,critical
+441,[PLC1]GGB000045929,MB37529,1,工序5-2-9：,TRUE,,,critical
+442,[PLC1]GGB00004592A,MB3752A,1,工序5-2-10：,TRUE,,,critical
+443,[PLC1]GGB00004592B,MB3752B,1,工序5-2-11：,TRUE,,,critical
+444,[PLC1]GGB00004592C,MB3752C,1,工序5-2-12：,TRUE,,,critical
+445,[PLC1]GGB00004592D,MB3752D,1,工序5-2-13：,TRUE,,,critical
+448,[PLC1]GGB000045930,MB37530,1,工序5-3-0：下料电缸闭合超时报警,TRUE,Robot electric cylinder closing timeout alarm,M03SSM*-03-03,critical
+449,[PLC1]GGB000045931,MB37531,1,工序5-3-1：下料电缸张开超时报警,TRUE,Robot electric cylinder open overtime alarm,M03SSM*-04-03,critical
+450,[PLC1]GGB000045932,MB37532,1,工序5-3-2：1#翻转电缸闭合超时报警,TRUE,1#Electric cylinder closed overtime alarm,M03SSM*-05-03,critical
+451,[PLC1]GGB000045933,MB37533,1,工序5-3-3：1#翻转电缸张开超时报警,TRUE,1#Electric cylinder open overtime alarm,M03SSM*-06-03,critical
+452,[PLC1]GGB000045934,MB37534,1,工序5-3-4：2#翻转电缸闭合超时报警,TRUE,2#Electric cylinder closed overtime alarm,M03SSM*-07-03,critical
+453,[PLC1]GGB000045935,MB37535,1,工序5-3-5：2#翻转电缸张开超时报警,TRUE,2#Electric cylinder open overtime alarm,M03SSM*-08-03,critical
+454,[PLC1]GGB000045936,MB37536,1,工序5-3-6：3#翻转电缸闭合超时报警,TRUE,3#Electric cylinder closed overtime alarm,M03SSM*-09-03,critical
+455,[PLC1]GGB000045937,MB37537,1,工序5-3-7：3#翻转电缸张开超时报警,TRUE,3#Electric cylinder open overtime alarm,M03SSM*-10-03,critical
+456,[PLC1]GGB000045938,MB37538,1,工序5-3-8：4#翻转电缸闭合超时报警,TRUE,4#Electric cylinder closed overtime alarm,M03SSM*-11-03,critical
+457,[PLC1]GGB000045939,MB37539,1,工序5-3-9：4#翻转电缸张开超时报警,TRUE,4#Electric cylinder open overtime alarm,M03SSM*-12-03,critical
+458,[PLC1]GGB00004593A,MB3753A,1,工序5-3-10：下料搬运料盘未取下报警,TRUE,Alarm when the tray is not removed,S02SSSE-95-03,critical
+459,[PLC1]GGB00004593B,MB3753B,1,工序5-3-11：下料搬运料盘未回送完成报警,TRUE,Tray has not returned to complete the alarm,S02SSSE-96-03,critical
+460,[PLC1]GGB00004593C,MB3753C,1,工序5-3-12：,TRUE,,,critical
+461,[PLC1]GGB00004593D,MB3753D,1,工序5-3-13：,TRUE,,,critical
+464,[PLC1]GGB000045940,MB37540,1,工序5-4-0：2#机器人Error,TRUE,2# Robot Error,M01RBRD-07-03,critical
+465,[PLC1]GGB000045941,MB37541,1,工序5-4-1：2#机器人EstopOn（安全门）,TRUE,2# Robot EstopOn (safety door),M01RBRD-08-03,critical
+466,[PLC1]GGB000045942,MB37542,1,工序5-4-2：2#机器人SError（严重报警）,TRUE,2# Robot SError (serious alarm),M01RBRD-09-03,critical
+467,[PLC1]GGB000045943,MB37543,1,工序5-4-3：2#机器人Warning（警告）,TRUE,2# Robot Warning (Warning),M01RBRD-10-03,critical
+468,[PLC1]GGB000045944,MB37544,1,工序5-4-4：下料电缸ALARM,TRUE,Robot electric cylinder ALARM,M06SSM*-18-03,critical
+469,[PLC1]GGB000045945,MB37545,1,工序5-4-5：2#架台气压检测报警,TRUE,2#Frame pressure detection alarm,F99PSSR-19-03,critical
+470,[PLC1]GGB000045946,MB37546,1,工序5-4-6：,TRUE,,,critical
+471,[PLC1]GGB000045947,MB37547,1,工序5-4-7：2#架台前左安全门报警,TRUE,2#The front left safety door alarms,F99PSSR-20-03,critical
+472,[PLC1]GGB000045948,MB37548,1,工序5-4-8：2#架台前右安全门报警,TRUE,2#The front right safety door alarms,F99PSSR-21-03,critical
+473,[PLC1]GGB000045949,MB37549,1,工序5-4-9：2#架台右侧安全门报警,TRUE,2#Right safety door alarm,F99PSSR-22-03,critical
+474,[PLC1]GGB00004594A,MB3754A,1,工序5-4-10：1#翻转电缸ALARM,TRUE,1#Flip electric cylinder ALARM,M06SSM*-13-03,critical
+475,[PLC1]GGB00004594B,MB3754B,1,工序5-4-11：2#翻转电缸ALARM,TRUE,2#Flip electric cylinder ALARM,M06SSM*-14-03,critical
+476,[PLC1]GGB00004594C,MB3754C,1,工序5-4-12：3#翻转电缸ALARM,TRUE,3#Flip electric cylinder ALARM,M06SSM*-15-03,critical
+477,[PLC1]GGB00004594D,MB3754D,1,工序5-4-13：4#翻转电缸ALARM,TRUE,4#Flip electric cylinder ALARM,M06SSM*-16-03,critical
+480,[PLC1]GGB000046900,MB37600,1,工序6-0-0：IL轴伺服原点报警,TRUE,IL axis servo origin alarm,M02GAA*-39-03,critical
+481,[PLC1]GGB000046901,MB37601,1,工序6-0-1：IL轴伺服报警,TRUE,IL axis servo alarm,M99GAA*-40-03,critical
+482,[PLC1]GGB000046902,MB37602,1,工序6-0-2：IF轴伺服原点报警,TRUE,IF axis servo origin alarm,M02GAA*-41-03,critical
+483,[PLC1]GGB000046903,MB37603,1,工序6-0-3：IF轴伺服报警,TRUE,IF axis servo alarm,M99GAA*-42-03,critical
+484,[PLC1]GGB000046904,MB37604,1,工序6-0-4：OF轴伺服原点报警,TRUE,OF axis servo origin alarm,M02GAA*-43-03,critical
+485,[PLC1]GGB000046905,MB37605,1,工序6-0-5：OF轴伺服报警,TRUE,OF axis servo alarm,M99GAA*-44-03,critical
+486,[PLC1]GGB000046906,MB37606,1,工序6-0-6：OR轴伺服原点报警,TRUE,OR axis servo origin alarm,M02GAA*-45-03,critical
+487,[PLC1]GGB000046907,MB37607,1,工序6-0-7：OR轴伺服报警,TRUE,OR axis servo alarm,M99GAA*-46-03,critical
+488,[PLC1]GGB000046908,MB37608,1,工序6-0-8：,TRUE,,,critical
+489,[PLC1]GGB000046909,MB37609,1,工序6-0-9：,TRUE,,,critical
+490,[PLC1]GGB00004690A,MB3760A,1,工序6-0-10：,TRUE,,,critical
+491,[PLC1]GGB00004690B,MB3760B,1,工序6-0-11：,TRUE,,,critical
+492,[PLC1]GGB00004690C,MB3760C,1,工序6-0-12：,TRUE,,,critical
+493,[PLC1]GGB00004690D,MB3760D,1,工序6-0-13：,TRUE,,,critical
+496,[PLC1]GGB000046910,MB37610,1,工序6-1-0：左侧后段输送小车检测报警,TRUE,The left rear car alarm,S02SSSE-106-03,critical
+497,[PLC1]GGB000046911,MB37611,1,工序6-1-1：左侧前段输送小车检测报警,TRUE,The front car on the left alarms,S02SSSE-107-03,critical
+498,[PLC1]GGB000046912,MB37612,1,工序6-1-2：右侧前段输送小车检测报警,TRUE,The front car on the right side alarms,S02SSSE-108-03,critical
+499,[PLC1]GGB000046913,MB37613,1,工序6-1-3：右侧后段输送小车检测报警,TRUE,The right rear car alarms,S02SSSE-109-03,critical
+500,[PLC1]GGB000046914,MB37614,1,工序6-1-4：输送带治具未检测到报警,TRUE,Conveyor belt fixture detection alarm,S02SSSE-110-03,critical
+501,[PLC1]GGB000046915,MB37615,1,工序6-1-5：,TRUE,,,critical
+502,[PLC1]GGB000046916,MB37616,1,工序6-1-6：,TRUE,,,critical
+503,[PLC1]GGB000046917,MB37617,1,工序6-1-7：,TRUE,,,critical
+504,[PLC1]GGB000046918,MB37618,1,工序6-1-8：,TRUE,,,critical
+505,[PLC1]GGB000046919,MB37619,1,工序6-1-9：,TRUE,,,critical
+506,[PLC1]GGB00004691A,MB3761A,1,工序6-1-10：,TRUE,,,critical
+507,[PLC1]GGB00004691B,MB3761B,1,工序6-1-11：,TRUE,,,critical
+508,[PLC1]GGB00004691C,MB3761C,1,工序6-1-12：,TRUE,,,critical
+509,[PLC1]GGB00004691D,MB3761D,1,工序6-1-13：,TRUE,,,critical
+512,[PLC1]GGB000046920,MB37620,1,工序6-2-0：,TRUE,,,critical
+513,[PLC1]GGB000046921,MB37621,1,工序6-2-1：,TRUE,,,critical
+514,[PLC1]GGB000046922,MB37622,1,工序6-2-2：,TRUE,,,critical
+515,[PLC1]GGB000046923,MB37623,1,工序6-2-3：,TRUE,,,critical
+516,[PLC1]GGB000046924,MB37624,1,工序6-2-4：,TRUE,,,critical
+517,[PLC1]GGB000046925,MB37625,1,工序6-2-5：,TRUE,,,critical
+518,[PLC1]GGB000046926,MB37626,1,工序6-2-6：,TRUE,,,critical
+519,[PLC1]GGB000046927,MB37627,1,工序6-2-7：,TRUE,,,critical
+520,[PLC1]GGB000046928,MB37628,1,工序6-2-8：,TRUE,,,critical
+521,[PLC1]GGB000046929,MB37629,1,工序6-2-9：,TRUE,,,critical
+522,[PLC1]GGB00004692A,MB3762A,1,工序6-2-10：,TRUE,,,critical
+523,[PLC1]GGB00004692B,MB3762B,1,工序6-2-11：,TRUE,,,critical
+524,[PLC1]GGB00004692C,MB3762C,1,工序6-2-12：,TRUE,,,critical
+525,[PLC1]GGB00004692D,MB3762D,1,工序6-2-13：,TRUE,,,critical
+528,[PLC1]GGB000046930,MB37630,1,工序6-3-0：,TRUE,,,critical
+529,[PLC1]GGB000046931,MB37631,1,工序6-3-1：,TRUE,,,critical
+530,[PLC1]GGB000046932,MB37632,1,工序6-3-2：,TRUE,,,critical
+531,[PLC1]GGB000046933,MB37633,1,工序6-3-3：,TRUE,,,critical
+532,[PLC1]GGB000046934,MB37634,1,工序6-3-4：,TRUE,,,critical
+533,[PLC1]GGB000046935,MB37635,1,工序6-3-5：,TRUE,,,critical
+534,[PLC1]GGB000046936,MB37636,1,工序6-3-6：,TRUE,,,critical
+535,[PLC1]GGB000046937,MB37637,1,工序6-3-7：,TRUE,,,critical
+536,[PLC1]GGB000046938,MB37638,1,工序6-3-8：,TRUE,,,critical
+537,[PLC1]GGB000046939,MB37639,1,工序6-3-9：,TRUE,,,critical
+538,[PLC1]GGB00004693A,MB3763A,1,工序6-3-10：,TRUE,,,critical
+539,[PLC1]GGB00004693B,MB3763B,1,工序6-3-11：,TRUE,,,critical
+540,[PLC1]GGB00004693C,MB3763C,1,工序6-3-12：,TRUE,,,critical
+541,[PLC1]GGB00004693D,MB3763D,1,工序6-3-13：,TRUE,,,critical
+544,[PLC1]GGB000046940,MB37640,1,工序6-4-0：,TRUE,,,critical
+545,[PLC1]GGB000046941,MB37641,1,工序6-4-1：,TRUE,,,critical
+546,[PLC1]GGB000046942,MB37642,1,工序6-4-2：,TRUE,,,critical
+547,[PLC1]GGB000046943,MB37643,1,工序6-4-3：,TRUE,,,critical
+548,[PLC1]GGB000046944,MB37644,1,工序6-4-4：,TRUE,,,critical
+549,[PLC1]GGB000046945,MB37645,1,工序6-4-5：,TRUE,,,critical
+550,[PLC1]GGB000046946,MB37646,1,工序6-4-6：,TRUE,,,critical
+551,[PLC1]GGB000046947,MB37647,1,工序6-4-7：,TRUE,,,critical
+552,[PLC1]GGB000046948,MB37648,1,工序6-4-8：,TRUE,,,critical
+553,[PLC1]GGB000046949,MB37649,1,工序6-4-9：,TRUE,,,critical
+554,[PLC1]GGB00004694A,MB3764A,1,工序6-4-10：,TRUE,,,critical
+555,[PLC1]GGB00004694B,MB3764B,1,工序6-4-11：,TRUE,,,critical
+556,[PLC1]GGB00004694C,MB3764C,1,工序6-4-12：,TRUE,,,critical
+557,[PLC1]GGB00004694D,MB3764D,1,工序6-4-13：,TRUE,,,critical
+558,[PLC1]GGB00004694D,MB37650,1,启动按钮按下,FALSE,,,critical
+559,[PLC1]GGB00004694D,MB37651,1,停止按钮按下,FALSE,,,critical
+600,[PLC1]GGB00004694D,MB37652,1,复位按钮按下,FALSE,,,critical
+601,[PLC1]GMB000081001,MB37660,1,流程-上料满盘取下标志,FALSE,,,critical
+602,[PLC1]GMB000081103,MB37661,1,流程-上料机器人取料完成,FALSE,,,critical
+603,[PLC1]GMB000081104,MB37662,1,流程-上料机器人拍照完成,FALSE,,,critical
+604,[PLC1]GMB000081105,MB37663,1,流程-上料机器人拍照NG,FALSE,,,critical
+605,[PLC1]GMB000081200,MB37664,1,流程-上料机器人1#上料完成,FALSE,,,critical
+606,[PLC1]GMB000081201,MB37665,1,流程-上料机器人2#上料完成,FALSE,,,critical
+607,[PLC1]GMB000081202,MB37666,1,流程-上料机器人3#上料完成,FALSE,,,critical
+608,[PLC1]GMB000081203,MB37667,1,流程-上料机器人4#上料完成,FALSE,,,critical
+609,[PLC1]GMB000030130,MB37668,1,流程-上料骨架检测完成,FALSE,,,critical
+610,[PLC1]GMB000030200,MB37669,1,流程-绕线骨架扫码完成,FALSE,,,critical
+611,[PLC1]GMB000030201,MB3766A,1,流程-绕线模具扫码完成,FALSE,,,critical
+612,[PLC1]GMB000030202,MB3766B,1,流程-绕线小车骨架取出完成,FALSE,,,critical
+613,[PLC1]GMB000030210,MB3766C,1,流程-绕线治具取出完成,FALSE,,,critical
+614,[PLC1]GMB000030211,MB3766D,1,流程-小车治具回送完成,FALSE,,,critical
+615,[PLC1]GMB000030250,MB37670,1,流程-绕线治具回送完成,FALSE,,,critical
+616,[PLC1]GMB000082201,MB37671,1,流程-绕线线圈完成标志,FALSE,,,critical
+617,[PLC1]GMB000082202,MB37672,1,流程-绕线起线完成标志,FALSE,,,critical
+618,[PLC1]GMB000082203,MB37673,1,流程-绕线允许标志,FALSE,,,critical
+619,[PLC1]GMB000082204,MB37674,1,流程-绕线尾线允许标志,FALSE,,,critical
+620,[PLC1]GMB000030300,MB37675,1,流程-点胶1#相机拍照完成,FALSE,,,critical
+621,[PLC1]GMB000030301,MB37676,1,流程-点胶2#相机拍照完成,FALSE,,,critical
+622,[PLC1]GMB000030302,MB37677,1,流程-1#模具点胶完成,FALSE,,,critical
+623,[PLC1]GMB000030303,MB37678,1,流程-2#模具点胶完成,FALSE,,,critical
+624,[PLC1]GMB000030304,MB37679,1,流程-点胶1#相机拍照中,FALSE,,,critical
+625,[PLC1]GMB000030305,MB3767A,1,流程-点胶2#相机拍照中,FALSE,,,critical
+626,[PLC1]GMB000030306,MB3767B,1,流程-1#运行自动排胶允许,FALSE,,,critical
+627,[PLC1]GMB000030310,MB3767C,1,流程-点胶3#相机拍照完成,FALSE,,,critical
+628,[PLC1]GMB000030311,MB3767D,1,流程-点胶4#相机拍照完成,FALSE,,,critical
+629,[PLC1]GMB000030312,MB37680,1,流程-3#模具点胶完成,FALSE,,,critical
+630,[PLC1]GMB000030313,MB37681,1,流程-4#模具点胶完成,FALSE,,,critical
+631,[PLC1]GMB000030314,MB37682,1,流程-点胶3#相机拍照中,FALSE,,,critical
+632,[PLC1]GMB000030315,MB37683,1,流程-点胶4#相机拍照中,FALSE,,,critical
+633,[PLC1]GMB000030316,MB37684,1,流程-2#运行自动排胶允许,FALSE,,,critical
+634,[PLC1]GMB000030330,MB37685,1,流程-自动擦胶允许,FALSE,,,critical
+635,[PLC1]GMB000030320,MB37686,1,流程-点胶1#相机NG状态,FALSE,,,critical
+636,[PLC1]GMB000030321,MB37687,1,流程-点胶1#相机OK状态,FALSE,,,critical
+637,[PLC1]GMB000030322,MB37688,1,流程-点胶2#相机NG状态,FALSE,,,critical
+638,[PLC1]GMB000030323,MB37689,1,流程-点胶2#相机OK状态,FALSE,,,critical
+639,[PLC1]GMB000030324,MB3768A,1,流程-点胶3#相机NG状态,FALSE,,,critical
+640,[PLC1]GMB000030325,MB3768B,1,流程-点胶3#相机OK状态,FALSE,,,critical
+641,[PLC1]GMB000030326,MB3768C,1,流程-点胶4#相机NG状态,FALSE,,,critical
+642,[PLC1]GMB000030327,MB3768D,1,流程-点胶4#相机OK状态,FALSE,,,critical
+643,[PLC1]GMB000030400,MB37690,1,流程-UV灯固化完成,FALSE,,,critical
+644,[PLC1]GMB000030401,MB37691,1,流程-右侧剪线完成,FALSE,,,critical
+645,[PLC1]GMB000030402,MB37692,1,流程-左侧剪线完成,FALSE,,,critical
+646,[PLC1]GMB000085001,MB37693,1,流程-下料空盘取下标志,FALSE,,,critical
+647,[PLC1]GMB000030511,MB37694,1,流程-下料1#翻转取料完成,FALSE,,,critical
+648,[PLC1]GMB000030512,MB37695,1,流程-下料2#翻转取料完成,FALSE,,,critical
+649,[PLC1]GMB000030513,MB37696,1,流程-下料3#翻转取料完成,FALSE,,,critical
+650,[PLC1]GMB000030514,MB37697,1,流程-下料4#翻转取料完成,FALSE,,,critical
+651,[PLC1]GMB000030521,MB37698,1,流程-1#下料取料完成,FALSE,,,critical
+652,[PLC1]GMB000030522,MB37699,1,流程-2#下料取料完成,FALSE,,,critical
+653,[PLC1]GMB000030523,MB3769A,1,流程-3#下料取料完成,FALSE,,,critical
+654,[PLC1]GMB000030524,MB3769B,1,流程-4#下料取料完成,FALSE,,,critical
+655,[PLC1]GMB000086006,MB3769C,1,流程-输送带后段小车到位,FALSE,,,critical
+656,[PLC1]GMB000086005,MB3769D,1,流程-输送带前段小车到位,FALSE,,,critical

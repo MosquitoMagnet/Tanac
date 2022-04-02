@@ -1,0 +1,98 @@
+﻿<Window x:Class="Mv.Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        Height="{Binding Path=MainWindowHeight, Source={x:Static settings:Settings.Default}, Mode=TwoWay}"
+        Width="{Binding Path=MainWindowWidth, Source={x:Static settings:Settings.Default}, Mode=TwoWay}"
+        xmlns:i18N="clr-namespace:Mv.Core.I18n;assembly=MV.Core"
+        xmlns:resx="clr-namespace:Mv.Resources.Resources;assembly=MV.Resources"
+        i18N:Translation.ResourceManager="{x:Static resx:lang.ResourceManager}"
+        xmlns:settings="clr-namespace:Mv.Shell"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:ui="clr-namespace:Mv.Ui.Core;assembly=MV.UI"
+        xmlns:views="clr-namespace:Mv.Shell.Views"
+        xmlns:vm="clr-namespace:Mv.Shell.ViewModels"
+        xmlns:appStore="clr-namespace:Mv.Shell.Views.AppStore"
+        Title="{i18N:Loc title}"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        prism:RegionManager.RegionManager="{Binding RegionManager}"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource MainWindowStyle}"
+        Icon="pack://application:,,,/MV.Resources;component/Images/logo-icon.ico">
+    <materialDesign:DialogHost Identifier="RootDialog">
+        <Grid Background="{StaticResource LightGreyBackgroundBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="68" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="{StaticResource PrimaryHueDarkBrush}" />
+
+            <TabControl Grid.Column="0" Grid.ColumnSpan="2" SelectedIndex="0"
+                        Style="{StaticResource MainTabControlStyle}"
+                        ItemContainerStyle="{StaticResource MainTabItemStyle}"
+                        prism:RegionManager.RegionName="{x:Static ui:RegionNames.MainTabRegion}">
+                <TabControl.Background>
+                    <ImageBrush ImageSource="/MockData/background1.jpg" />
+                </TabControl.Background>
+            </TabControl>
+
+            <StackPanel Grid.Column="0" VerticalAlignment="Bottom">
+                <ToggleButton x:Name="AppStoreToggleButton" Height="56" Style="{StaticResource LeftBarAndUnderlineToggleButtonStyle}"
+                              IsChecked="{Binding AppStoreIsDisplayed}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="2" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <materialDesign:PackIcon
+                                Kind="Apps"
+                                Foreground="{StaticResource LightGreyBackgroundBrush}"
+                                HorizontalAlignment="Center"
+                                Height="22"
+                                Width="25" />
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10"
+                                   Text="{i18N:Loc Tools}" />
+                    </Grid>
+                </ToggleButton>
+                <ToggleButton x:Name="SettingsToggleButton"
+                              Height="56" 
+                              Style="{StaticResource LeftBarAndUnderlineToggleButtonStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="2" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <materialDesign:PackIcon Kind="Menu" Foreground="{StaticResource LightGreyBackgroundBrush}" HorizontalAlignment="Center" Height="22" Width="25" />
+                        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10"
+                                   Text="{i18N:Loc menu}" />
+                    </Grid>
+                </ToggleButton>
+                <views:SettingsPopup IsOpen="{Binding IsChecked, ElementName=SettingsToggleButton}"  StaysOpen="False"
+                                     PlacementTarget="{Binding ElementName=SettingsToggleButton}" Placement="Right" VerticalOffset="-318" PopupAnimation="Fade"
+                                     Width="284" Height="Auto" />
+            </StackPanel>
+
+            <UserControl Grid.Column="1">
+                <UserControl.Resources>
+                    <appStore:AppStoreComponent x:Key="AppStoreComponent" />
+                </UserControl.Resources>
+                <UserControl.Style>
+                    <Style TargetType="UserControl">
+                        <Setter Property="Content" Value="{x:Null}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=AppStoreToggleButton, Path=IsChecked}" Value="True">
+                                <Setter Property="Content" Value="{StaticResource AppStoreComponent}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </UserControl.Style>
+            </UserControl>
+            <Grid Grid.Column="1"  ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <materialDesign:Snackbar  MessageQueue="{Binding GlobalMessageQueue}" />
+            </Grid>
+        </Grid>
+    </materialDesign:DialogHost>
+</Window>
